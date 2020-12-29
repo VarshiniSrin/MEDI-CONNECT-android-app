@@ -4,15 +4,20 @@
     <item
         android:id="@+id/profile"
         android:icon="@drawable/profile"
-        android:title="View Profile"></item>
+        android:title="@string/View_Profile"/>
     <item
         android:id="@+id/Poc"
-        android:title="Point of contact"
-        >
-        </item>
+        android:title="@string/Point_Of_Contact"
+        />
     <item
         android:id="@+id/password"
         android:icon="@android:drawable/ic_secure"
-        android:title="Change Password">
+        android:title="@string/Change_Password">
+    </item>
+
+    <item
+        android:id="@+id/settings"
+        android:icon="@android:drawable/ic_secure"
+        android:title="@string/Settings">
     </item>
     </menu>

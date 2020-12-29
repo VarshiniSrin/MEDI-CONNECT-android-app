@@ -79,7 +79,7 @@ public class Signup extends AppCompatActivity {
                             myDb.register(Email.getText().toString(), Name.getText().toString(), Integer.parseInt(age.getText().toString()), gender.getSelectedItem().toString(), Integer.parseInt(height.getText().toString()), Integer.parseInt(weight.getText().toString()));
                             myDb.addvalues(Email.getText().toString(), password.getText().toString());
                             myDb.registerpoc(Email.getText().toString(), p_phone.getText().toString(), p_email.getText().toString(), w_email.getText().toString(), d_email.getText().toString());
-                            Toast.makeText(Signup.this, "registration sucessfull", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(Signup.this, "registration successful", Toast.LENGTH_SHORT).show();
                             Intent i=new Intent(getApplicationContext(),MainActivity.class);
                             startActivity(i);
                         }

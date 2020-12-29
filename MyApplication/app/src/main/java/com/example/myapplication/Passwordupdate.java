@@ -44,10 +44,10 @@ public class Passwordupdate extends AppCompatActivity {
                 if (new_pswd.equals(re_pswd)) {
 
 myDb.passupdate(email,re_pswd);
-                    Toast.makeText(this, "saved sucessfully", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(this, "saved successfully", Toast.LENGTH_SHORT).show();
                 } else {
-                    npswd.setError("password missmatch");
-                    rpswd.setError("password missmatch");
+                    npswd.setError("password mismatch");
+                    rpswd.setError("password mismatch");
                 }
             } else {
                 // Toast.makeText(this, s, Toast.LENGTH_SHORT).show();

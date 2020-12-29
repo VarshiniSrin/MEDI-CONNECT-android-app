@@ -131,7 +131,7 @@ String email;
                 gallery.setType("image/*");
               gallery.setAction(Intent.ACTION_GET_CONTENT);
 
-                startActivityForResult(Intent.createChooser(gallery, "Sellect Picture"),PICK_IMAGE);
+                startActivityForResult(Intent.createChooser(gallery, "Select Picture"),PICK_IMAGE);
             }
         });
         //profile edit end
@@ -323,7 +323,7 @@ String email;
         Intent i = new Intent(this, MyAlarm.class);
         PendingIntent pi = PendingIntent.getBroadcast(this, 0, i, 0);
         am.setRepeating(AlarmManager.RTC, time, AlarmManager.INTERVAL_DAY, pi);
-        Toast.makeText(this, "Alarm is set", Toast.LENGTH_SHORT).show();
+        //Toast.makeText(this, "Alarm is set", Toast.LENGTH_SHORT).show();
     }
 
     //To reset day steps to 0 each day

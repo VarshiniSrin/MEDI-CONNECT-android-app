@@ -68,7 +68,7 @@
                     android:background="@color/white"
                     android:drawableTop="@drawable/record"
                     android:onClick="c"
-                    android:text="Medical Records"
+                    android:text="@string/Medical_Records"
                     android:textColor="#000000"
                     android:textStyle="bold" />
 
@@ -96,7 +96,7 @@
                     android:background="@android:drawable/screen_background_light"
                     android:drawableTop="@drawable/diagnostic"
                     android:onClick="p"
-                    android:text="Self Diagonsis"
+                    android:text="@string/Self_Diagonsis"
                     android:textColor="#000000"
                     android:textStyle="bold" />
 
