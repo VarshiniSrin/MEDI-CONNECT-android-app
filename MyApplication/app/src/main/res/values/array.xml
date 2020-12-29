@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="array_values">
+        <item>Select</item>
+        <item>Abdominal pain</item>
+        <item>Abnormal menstruation</item>
+        <item>Acidity</item>
+        <item>Acute liver failure</item>
+        <item>Altered sensorium</item>
+        <item>Anxiety</item>
+        <item>Back pain</item>
+        <item>Belly pain</item>
+        <item>Blackheads</item>
+        <item>Bladder discomfort</item>
+        <item>Blister</item>
+        <item>Blood in sputum</item>
+        <item>Bloody stool</item>
+        <item>Blurred and distorted vision</item>
+        <item>Breathlessness</item>
+        <item>Brittle nails</item>
+        <item>Bruising</item>
+        <item>Burning micturition</item>
+        <item>Chest pain</item>
+        <item>Chills</item>
+        <item>Cold hands and feet</item>
+        <item>Coma</item>
+        <item>Congestion</item>
+        <item>Constipation</item>
+        <item>Continuous feel of urine</item>
+        <item>Continuous sneezing</item>
+        <item>Cough</item>
+        <item>Cramps</item>
+        <item>Dark urine</item>
+        <item>Dehydration</item>
+        <item>Depression</item>
+        <item>Diarrhoea</item>
+        <item>Dischromic patches</item>
+        <item>Distention of abdomen</item>
+        <item>Dizziness</item>
+        <item>Drying and tingling lips</item>
+        <item>Enlarged thyroid</item>
+        <item>Excessive hunger</item>
+        <item>Extra marital contacts</item>
+        <item>Family history</item>
+        <item>Fast heart rate</item>
+        <item>Fatigue</item>
+        <item>Fluid overload</item>
+        <item>Foul smell of urine</item>
+        <item>Headache</item>
+        <item>High fever</item>
+        <item>Hip joint pain</item>
+        <item>History of alcohol consumption</item>
+        <item>Increased appetite</item>
+        <item>Indigestion</item>
+        <item>Inflammatory nails</item>
+        <item>Internal itching</item>
+        <item>Irregular sugar level</item>
+        <item>Irritability</item>
+        <item>Irritation in anus</item>
+        <item>Itching</item>
+        <item>Joint pain</item>
+        <item>Knee pain</item>
+        <item>Lack of concentration</item>
+        <item>Lethargy</item>
+        <item>Loss of appetite</item>
+        <item>Loss of balance</item>
+        <item>Loss of smell</item>
+        <item>Malaise</item>
+        <item>Mild fever</item>
+        <item>Mood swings</item>
+        <item>Movement stiffness</item>
+        <item>Mucoid sputum</item>
+        <item>Muscle pain</item>
+        <item>Muscle wasting</item>
+        <item>Muscle weakness</item>
+        <item>Nausea</item>
+        <item>Neck pain</item>
+        <item>Nodal skin eruptions</item>
+        <item>Obesity</item>
+        <item>Pain behind the eyes</item>
+        <item>Pain during bowel movements</item>
+        <item>Pain in anal region</item>
+        <item>Painful walking</item>
+        <item>Palpitations</item>
+        <item>Passage of gases</item>
+        <item>Patches in throat</item>
+        <item>Phlegm</item>
+        <item>Polyuria</item>
+        <item>Prominent veins on calf</item>
+        <item>Puffy face and eyes</item>
+        <item>Pus filled pimples</item>
+        <item>Receiving blood transfusion</item>
+        <item>Receiving unsterile injections</item>
+        <item>Red sore around nose</item>
+        <item>Red spots over body</item>
+        <item>Redness of eyes</item>
+        <item>Restlessness</item>
+        <item>Runny nose</item>
+        <item>Rusty sputum</item>
+        <item>Scurring</item>
+        <item>Shivering</item>
+        <item>Silver like dusting</item>
+        <item>Sinus pressure</item>
+        <item>Skin peeling</item>
+        <item>Skin rash</item>
+        <item>Slurred speech</item>
+        <item>Small dents in nails</item>
+        <item>Spinning movements</item>
+        <item>Spotting urination</item>
+        <item>Stiff neck</item>
+        <item>Stomach bleeding</item>
+        <item>Stomach pain</item>
+        <item>Sunken eyes</item>
+        <item>Sweating</item>
+        <item>Swelled lymph nodes</item>
+        <item>Swelling joints</item>
+        <item>Swelling of stomach</item>
+        <item>Swollen blood vessels</item>
+        <item>Swollen extremities</item>
+        <item>Swollen legs</item>
+        <item>Throat irritation</item>
+        <item>Toxic look(typhos)</item>
+        <item>Ulcers on tongue</item>
+        <item>Unsteadiness</item>
+        <item>Visual disturbances</item>
+        <item>Vomiting</item>
+        <item>Watering from eyes</item>
+        <item>Weakness in limbs</item>
+        <item>Weakness of one body side</item>
+        <item>Weight gain</item>
+        <item>Weight loss</item>
+        <item>Yellow crust ooze</item>
+        <item>Yellow urine</item>
+        <item>Yellowing of eyes</item>
+        <item>Yellowish skin</item>
+    </array>
+</resources>

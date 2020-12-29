@@ -1,0 +1,85 @@
+apply plugin: 'com.android.application'
+apply plugin: 'com.chaquo.python'
+
+android {
+    compileSdkVersion 30
+    buildToolsVersion "30.0.2"
+
+    defaultConfig {
+        applicationId "com.example.labtest"
+
+        python{
+            pip{
+                install "numpy"
+                install "pandas"
+                install "scikit-learn"
+
+            }
+        }
+
+        //give source folder to python
+        sourceSets{
+            main{
+                python {
+                    srcDirs = ["src/main/python"]
+                }
+            }
+        }
+
+        minSdkVersion 16
+        targetSdkVersion 30
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+        ndk {
+            abiFilters "armeabi-v7a", "x86"
+        }
+
+        //Here we give path to python.exe. In every system it may be different
+        python{
+            buildPython "C:/Users/hi/AppData/Local/Programs/Python/Python37-32/python.exe"
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+
+dependencies {
+    implementation 'com.theartofdev.edmodo:android-image-cropper:2.8.+'
+    implementation 'de.hdodenhof:circleimageview:3.1.0'
+    implementation 'com.mikhaellopez:circularimageview:3.2.0'
+    implementation 'com.intuit.ssp:ssp-android:1.0.6'
+
+    implementation 'com.github.lecho:hellocharts-library:1.5.8@aar'
+    implementation fileTree(dir: "libs", include: ["*.jar"])
+    implementation 'androidx.appcompat:appcompat:1.2.0'
+
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.2'
+    implementation 'androidx.cardview:cardview:1.0.0'
+
+    implementation 'com.google.android.material:material:1.2.1'
+    implementation 'androidx.coordinatorlayout:coordinatorlayout:1.1.0'
+    implementation 'androidx.drawerlayout:drawerlayout:1.0.0'
+
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.2'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+
+    implementation fileTree(dir: "libs", include: ["*.jar"])
+    implementation files('libs/activation.jar')
+    implementation files('libs/additionnal.jar')
+    implementation files('libs/mail.jar')
+
+}
