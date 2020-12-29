@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">MEDI-CONNECT</string>
+    <string name="action_settings">Settings</string>
+    <string name="profile_desc">Rowan Sebastian Atkinson CBE is an English actor,  comedian and screenwriter</string>
+    <string name="profile_title">Mr Bean</string>
+    <string name="posts">posts</string>
+    <string name="followers">followers</string>
+    <string name="following">following</string>
+    <string name="msg_error_unable_select_profile_pic">Unable to set profile image. Please try again!</string>
+    <string name="lbl_set_profile_photo">Set profile image</string>
+    <string name="lbl_take_camera_picture">Take a picture</string>
+    <string name="lbl_choose_from_gallery">Choose from gallery</string>
+    <string name="toast_image_intent_null">Image picker option is missing!</string>
+
+    <!-- font families -->
+    <string name="font_family_light">sans-serif-light</string>
+    <string name="font_family_medium">sans-serif-medium</string>
+    <string name="font_family_regular">sans-serif</string>
+    <string name="font_family_condensed">sans-serif-condensed</string>
+    <string name="font_family_black">sans-serif-black</string>
+    <string name="font_family_thin">sans-serif-thin</string>
+    <string name="dialog_permission_title">Grant Permissions</string>
+    <string name="dialog_permission_message">This app needs permission to use this feature. You can grant them in app settings.</string>
+    <string name="go_to_settings">GOTO SETTINGS</string>
+
+
+    <string name="Sign_In">സൈൻ ഇൻ</string>
+    <string name="Email_ID">ഇ - മെയിൽ ഐഡി</string>
+    <string name="Password">പാസ്‌വേഡ്</string>
+    <string name="Sign_Up">സൈൻ അപ്പ് ചെയ്യുക</string>
+    <string name="NEXT">അടുത്തത്</string>
+    <string name="Full_Name">പൂർണ്ണമായ പേര്</string>
+    <string name="Age">പ്രായം</string>
+    <string name="Height">ഉയരം</string>
+    <string name="Weight">ഭാരം</string>
+    <string name="Welcome">സ്വാഗതം ! അപ്ലിക്കേഷൻ ഉപയോഗിക്കുന്നതിന് രജിസ്റ്റർ ചെയ്യുക. 😊</string>
+    <string name="Enter_Symptoms">ലക്ഷണങ്ങൾ നൽകുക</string>
+    <string name="Symptom_1">ലക്ഷണം 1</string>
+    <string name="Symptom_2">ലക്ഷണം 2</string>
+    <string name="Symptom_3">ലക്ഷണം 3</string>
+    <string name="Symptom_4">ലക്ഷണം 4</string>
+    <string name="Symptom_5">ലക്ഷണം 5</string>
+    <string name="Predict">പ്രവചിക്കുക</string>
+    <string name="Prognosis">രോഗനിർണയം</string>
+    <string name="Medical_Records">മെഡിക്കൽ റെക്കോർഡുകൾ</string>
+    <string name="Self_Diagonsis">സ്വയം രോഗനിർണയം</string>
+    <string name="time">സമയം</string>
+    <string name="Password_Change">പാസ്‌വേഡ് മാറ്റം</string>
+    <string name="Previous_Password">മുമ്പത്തെ പാസ്‌വേഡ്</string>
+    <string name="New_Password">പുതിയ പാസ്വേഡ്</string>
+    <string name="Re_Type_Password">പാസ്വേഡ് വീണ്ടും ടൈപ്പുചെയ്യുക</string>
+    <string name="Update">അപ്ഡേറ്റ് ചെയ്യുക</string>
+    <string name="Warden_Email">വാർഡൻ ഇമെയിൽ 📩</string>
+    <string name="Some_More">വാർഡൻ ഇമെയിൽ..😊</string>
+    <string name="Parent_Phone_Number">രക്ഷാകർതൃ ഫോൺ നമ്പർ 📞</string>
+    <string name="Parent_Email">രക്ഷാകർതൃ ഇമെയിൽ 📩</string>
+    <string name="Doctor_Email">ഡോക്ടർ ഇമെയിൽ 📩</string>
+    <string name="Register">രജിസ്റ്റർ ചെയ്യുക</string>
+    <string name="Poc_Update">POC അപ്ഡേറ്റ് ചെയ്യുക</string>
+    <string name="Save_Changes">മാറ്റങ്ങൾ സൂക്ഷിക്കുക</string>
+    <string name="Profile_Update">പ്രൊഫൈൽ അപ്‌ഡേറ്റ്</string>
+    <string name="Edit_Profile">പ്രൊഫൈൽ എഡിറ്റുചെയ്യുക</string>
+    <string name="View_Profile">വ്യക്തിവിവരങ്ങൾ കാണുക</string>
+    <string name="Point_Of_Contact">ബന്ധപ്പെടേണ്ട സ്ഥലം</string>
+    <string name="Change_Password">പാസ്വേഡ് മാറ്റുക</string>
+    <string name="Settings">ക്രമീകരണങ്ങൾ</string>
+</resources>
