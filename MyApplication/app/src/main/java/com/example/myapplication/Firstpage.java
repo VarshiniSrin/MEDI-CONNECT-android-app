@@ -8,6 +8,8 @@ import android.app.PendingIntent;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.content.res.Configuration;
+import android.content.res.Resources;
 import android.database.Cursor;
 import android.graphics.Color;
 import android.hardware.Sensor;
@@ -15,6 +17,7 @@ import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
 import android.hardware.SensorManager;
 import android.os.Bundle;
+import android.util.DisplayMetrics;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -65,6 +68,7 @@ import com.google.android.material.navigation.NavigationView;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
+import java.util.Locale;
 
 import lecho.lib.hellocharts.model.PieChartData;
 import lecho.lib.hellocharts.model.SliceValue;
@@ -94,6 +98,20 @@ public class Firstpage extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        final Locale language = getResources().getConfiguration().locale;
+        final String current = language.toString();
+        System.out.println("-----------------------------------------------------------------------------------");
+        System.out.println("Language chosen is" + current);
+
+//        Locale locale;
+//        locale = new Locale(languageToLoad);
+//        Locale.setDefault(locale);
+//        Configuration config = new Configuration();
+//        config.locale = locale;
+//        Firstpage.getBaseContext().getResources().updateConfiguration(config, Firstpage.getBaseContext().getResources().getDisplayMetrics());
+
+
         setContentView(R.layout.firstpage);
 
         //getSupportActionBar().hide();
@@ -367,8 +385,10 @@ public class Firstpage extends AppCompatActivity {
     }
 
     public void languageChange(MenuItem item) {
-
+        Intent intent = new Intent(getApplicationContext(),Settings.class);
+        startActivity(intent);
     }
+
 }
 
 /*

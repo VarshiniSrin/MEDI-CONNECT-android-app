@@ -22,6 +22,7 @@
         <activity android:name=".POCupdate"/>
         <activity android:name=".Profileupdate"/>
         <activity android:name=".Signup"/>
+        <activity android:name=".Settings"/>
         <activity android:name="com.theartofdev.edmodo.cropper.CropImageActivity" android:theme="@style/Base.Theme.AppCompat"/>
 
         <activity android:name=".Splash">
