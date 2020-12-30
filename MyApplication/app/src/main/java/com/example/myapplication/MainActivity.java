@@ -6,6 +6,7 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 
+import android.content.SharedPreferences;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 
@@ -28,14 +29,29 @@ import java.util.ArrayList;
 import java.util.List;
 public class MainActivity extends AppCompatActivity {
     ProjectDataBaseHelper myDb;
-Button button;
-Button button1;
-EditText Email;
-EditText password;
+    Button button;
+    Button button1;
+    EditText Email;
+    EditText password;
+    public static final String MyPREFERENCES = "MyPrefs" ;
+
+    public static final String pass = "phoneKey";
+    public static final String username = "emailKey";
+    public static final String userlogin= "userlogin" ;
+    SharedPreferences sharedpreferences;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        sharedpreferences = getSharedPreferences(MyPREFERENCES, Context.MODE_PRIVATE);
+        boolean is = true;
+        is=sharedpreferences.getBoolean(userlogin, false);
+        if(is){
+            Intent i=new Intent(getApplicationContext(),Firstpage.class);
+            i.putExtra("full_name", sharedpreferences.getString(username,"error"));
+            startActivity(i);
+        }
         myDb = new ProjectDataBaseHelper(this);
         Email=(EditText)findViewById(R.id.Email);
         password=(EditText)findViewById(R.id.Password);
@@ -44,24 +60,30 @@ EditText password;
         button.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
-Boolean validate;
-                validate=myDb.checkUserExist(Email.getText().toString(),password.getText().toString());
-              if(validate) {
-                  Toast.makeText(MainActivity.this, "welcome", Toast.LENGTH_SHORT).show();
-                  Intent i=new Intent(getApplicationContext(),Firstpage.class);
-                  i.putExtra("full_name", Email.getText().toString());
-                  startActivity(i);
-              }
-              else{
-                  AlertDialog alertDialog = new AlertDialog.Builder(MainActivity.this).create();
-                  alertDialog.setTitle("LOGIN FAILED");
-                  alertDialog.setMessage("Incorrect email or password..! \n Try again!");
-                  alertDialog.setButton("OK", new DialogInterface.OnClickListener() {
-                      public void onClick(DialogInterface dialog, int which) {
+                Boolean validate;
 
-                      }
-                  });
-                  alertDialog.show(); }
+                validate=myDb.checkUserExist(Email.getText().toString(),password.getText().toString());
+                if(validate) {
+                    Toast.makeText(MainActivity.this, "welcome", Toast.LENGTH_SHORT).show();
+                    SharedPreferences.Editor editor = sharedpreferences.edit();
+                    editor.putString(pass, password.getText().toString());
+                    editor.putString(username,Email.getText().toString());
+                    editor.putBoolean(userlogin, true);
+                    editor.commit();
+                    Intent i=new Intent(getApplicationContext(),Firstpage.class);
+                    i.putExtra("full_name", Email.getText().toString());
+                    startActivity(i);
+                }
+                else{
+                    AlertDialog alertDialog = new AlertDialog.Builder(MainActivity.this).create();
+                    alertDialog.setTitle("LOGIN FAILED");
+                    alertDialog.setMessage("Incorrect email or password..! \n Try again!");
+                    alertDialog.setButton("OK", new DialogInterface.OnClickListener() {
+                        public void onClick(DialogInterface dialog, int which) {
+
+                        }
+                    });
+                    alertDialog.show(); }
                 //myDb.close();
                 //myDb.addvalues("prajwal]@gmail.com","prajwal");
             }

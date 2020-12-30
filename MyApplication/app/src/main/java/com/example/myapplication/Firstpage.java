@@ -15,6 +15,8 @@ import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
 import android.hardware.SensorManager;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -87,13 +89,13 @@ public class Firstpage extends AppCompatActivity {
     private CircleImageView ProfileImage;
     private static final int PICK_IMAGE = 1;
 
-String email;
+    String email;
     ImageView editImage;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.firstpage);
-        getSupportActionBar().hide();
+        //getSupportActionBar().hide();
         Intent intent = getIntent();
          email = intent.getStringExtra("full_name");
         myDb = new ProjectDataBaseHelper(Firstpage.this);
@@ -206,6 +208,25 @@ String email;
         setData();
 
     }
+
+    public void logout(MenuItem item) {
+        SharedPreferences sharedpreferences = getSharedPreferences(MainActivity.MyPREFERENCES, Context.MODE_PRIVATE);
+        String userlogin="userlogin" ;
+        SharedPreferences.Editor editor = sharedpreferences.edit();
+        editor.clear();
+        editor.putBoolean(userlogin, false);
+        editor.commit();
+        finish();
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        getMenuInflater().inflate(R.menu.menu_main, menu);
+        return true;
+    }
+
+
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
@@ -341,6 +362,10 @@ String email;
         Intent intent = new Intent(getApplicationContext(),DisplayReports.class);
         intent.putExtra("full_name", email);
         startActivity(intent);
+    }
+
+    public void languageChange(MenuItem item) {
+
     }
 }
 

@@ -64,4 +64,7 @@
     <string name="Point_Of_Contact">Point of contact</string>
     <string name="Change_Password">Change Password</string>
     <string name="Settings">Settings</string>
+    <string name="Previous_Diseases_Allergies">Previous diseases/Allergies</string>
+    <string name="Enter_previous_diseases_allergies_if_any">Enter Previous diseases/allergies if any</string>
+    <string name="Logout">Logout</string>
 </resources>

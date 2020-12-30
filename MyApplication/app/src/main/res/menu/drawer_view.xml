@@ -15,9 +15,5 @@
         android:title="@string/Change_Password">
     </item>
 
-    <item
-        android:id="@+id/settings"
-        android:icon="@android:drawable/ic_secure"
-        android:title="@string/Settings">
-    </item>
+
     </menu>

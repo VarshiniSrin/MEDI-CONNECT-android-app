@@ -14,8 +14,6 @@ import static android.widget.Toast.LENGTH_LONG;
 
 public class ProjectDataBaseHelper extends SQLiteOpenHelper {
     public static final String DATABASE_NAME = "medical_app";
-    ;
-
     public ProjectDataBaseHelper(@Nullable Context context) {
         super(context, DATABASE_NAME, null, 1);
     }
@@ -25,7 +23,7 @@ public class ProjectDataBaseHelper extends SQLiteOpenHelper {
     public void onCreate(SQLiteDatabase db) {
         String studentrecord="create table LOGIN(email varchar(50) primary key, password varchar(10)) ";
         String studentpoc="create table POC(email varchar(50) primary key,p_g_mob_no varchar(10),p_g_email varchar(30),warden_email varchar(10),doctor_email varchar(30),foreign key (email) references LOGIN(email)) ";
-        String medicalrecord= "create table MEDICAL_RECORD(email varchar(50) primary key,name varchar(15),age int,gender varchar(15),height int,weight int,foreign key (email) references LOGIN(email))";
+        String medicalrecord= "create table MEDICAL_RECORD(email varchar(50) primary key,name varchar(15),age int,gender varchar(15),height int,weight int,blood varchar(15),previousdisease varchar(1500),foreign key (email) references LOGIN(email))";
         db.execSQL("create table PREVIOUS_RECORD(email varchar(50) ,timestamp varchar(15) primary key,disease varchar(1000),symptoms varchar(1000),foreign key (email) references LOGIN(email))");
         db.execSQL("CREATE TABLE mytable(email varchar(50) primary key,newimage blob,foreign key (email) references LOGIN(email))");
         db.execSQL(studentpoc);
@@ -58,7 +56,7 @@ public class ProjectDataBaseHelper extends SQLiteOpenHelper {
         return true;
     }
 
-    public boolean register(String EMAIL ,String fullname,Integer age,String gender,Integer height,Integer weight ){
+    public boolean register(String EMAIL ,String fullname,Integer age,String gender,Integer height,Integer weight,String blood,String previous ){
         SQLiteDatabase db=getWritableDatabase();
         ContentValues contentValues=new ContentValues();
         contentValues.put("EMAIL",EMAIL);
@@ -67,6 +65,8 @@ public class ProjectDataBaseHelper extends SQLiteOpenHelper {
         contentValues.put("GENDER",gender);
         contentValues.put("HEIGHT",height);
         contentValues.put("WEIGHT",weight);
+        contentValues.put("blood",blood);
+        contentValues.put("previousdisease",previous);
         db.insert("MEDICAL_RECORD",null,contentValues);
         //db.close();
         return true;
@@ -122,12 +122,13 @@ public class ProjectDataBaseHelper extends SQLiteOpenHelper {
         return true;
     }
 
-    public boolean updateprofile(String email, String ua, String uh, String uw) {
+    public boolean updateprofile(String email, String ua, String uh, String uw,String previous) {
         SQLiteDatabase db=getWritableDatabase();
         ContentValues contentValues=new ContentValues();
         contentValues.put("AGE",ua);
         contentValues.put("HEIGHT",uh);
         contentValues.put("WEIGHT",uw);
+        contentValues.put("previousdisease",previous);
         Cursor cursor = db.rawQuery("Select * from  MEDICAL_RECORD where email = ?", new String[]{email});
         if (cursor.getCount() > 0) {
             long result = db.update("MEDICAL_RECORD", contentValues, "email=?", new String[]{email});
@@ -137,12 +138,12 @@ public class ProjectDataBaseHelper extends SQLiteOpenHelper {
 
     public Cursor fetchprofile(String email) {
         SQLiteDatabase db=getWritableDatabase();
-        Cursor crs = db.rawQuery("select age,height,weight from MEDICAL_RECORD where email = ?", new String[]{email});
+        Cursor crs = db.rawQuery("select age,height,weight,previousdisease from MEDICAL_RECORD where email = ?", new String[]{email});
         return crs;
     }
     public Cursor fetchprofile1(String email) {
         SQLiteDatabase db=getWritableDatabase();
-        Cursor crs = db.rawQuery("select name,age,height,weight from MEDICAL_RECORD where email = ?", new String[]{email});
+        Cursor crs = db.rawQuery("select name,blood,height,weight from MEDICAL_RECORD where email = ?", new String[]{email});
         return crs;
     }
 

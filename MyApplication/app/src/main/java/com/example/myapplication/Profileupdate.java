@@ -1,5 +1,4 @@
 package com.example.myapplication;
-
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
@@ -15,7 +14,7 @@ import android.widget.Toast;
 
 public class Profileupdate extends AppCompatActivity {
     ProjectDataBaseHelper myDb;
-    EditText agetv,heighttv,weighttv;
+    EditText agetv,heighttv,weighttv,previous;
     String email;
 
     @Override
@@ -27,9 +26,11 @@ public class Profileupdate extends AppCompatActivity {
         agetv=findViewById(R.id.agetext);
         heighttv=findViewById(R.id.heighttext);
         weighttv=findViewById(R.id.weighttext);
+        previous=findViewById(R.id.editTextTextMultiLine2);
         agetv.setEnabled(false);
         heighttv.setEnabled(false);
         weighttv.setEnabled(false);
+        previous.setEnabled(false);
         Button b=findViewById(R.id.button);
 
         b.setVisibility(View.GONE);
@@ -39,7 +40,7 @@ public class Profileupdate extends AppCompatActivity {
             agetv.setText(res.getString(0));
             heighttv.setText(res.getString(1));
             weighttv.setText(res.getString(2));
-
+            previous.setText(res.getString(3));
         }
 
     }
@@ -62,8 +63,7 @@ public class Profileupdate extends AppCompatActivity {
             weighttv.setError("Please enter a phone number");
             return;
         }
-
-        myDb.updateprofile(email,ua,uh,uw);
+        myDb.updateprofile(email,ua,uh,uw,previous.getText().toString());
         Toast.makeText(this, "Profile updated successfully", Toast.LENGTH_SHORT).show();
         startActivity(new Intent(getApplicationContext(),Firstpage.class));
     }
@@ -74,6 +74,7 @@ public class Profileupdate extends AppCompatActivity {
         agetv.setEnabled(true);
         heighttv.setEnabled(true);
         weighttv.setEnabled(true);
+        previous.setEnabled(true);
         Button b=findViewById(R.id.button);
         b.setVisibility(View.VISIBLE);
 
