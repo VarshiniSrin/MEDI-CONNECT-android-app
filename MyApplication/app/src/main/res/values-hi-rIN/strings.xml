@@ -69,4 +69,7 @@
     <string name="Previous_Diseases_Allergies">पिछले रोग / एलर्जी</string>
     <string name="Enter_previous_diseases_allergies_if_any">यदि कोई हो तो पिछला रोग / एलर्जी दर्ज करें</string>
     <string name="Logout">लॉग आउट</string>
+
+    <string name="Languages">बोली</string>
+    <string name="User_Interface">प्रयोक्ता इंटरफ़ेस</string>
 </resources>

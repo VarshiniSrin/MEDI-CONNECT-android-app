@@ -69,4 +69,7 @@
     <string name="Previous_Diseases_Allergies">മുമ്പത്തെ രോഗങ്ങൾ / അലർജി</string>
     <string name="Enter_previous_diseases_allergies_if_any">മുമ്പത്തെ രോഗങ്ങൾ / അലർജികൾ ഉണ്ടെങ്കിൽ നൽകുക</string>
     <string name="Logout">ലോഗൗട്ട്</string>
+
+    <string name="Languages">ഭാഷകൾ</string>
+    <string name="User_Interface">ഉപയോക്തൃ ഇന്റർഫേസ്</string>
 </resources>
