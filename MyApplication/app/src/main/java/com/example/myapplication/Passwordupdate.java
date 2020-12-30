@@ -10,6 +10,8 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import java.util.Objects;
+
 public class Passwordupdate extends AppCompatActivity {
     ProjectDataBaseHelper myDb;
     EditText opswd,npswd,rpswd;
@@ -19,6 +21,8 @@ public class Passwordupdate extends AppCompatActivity {
         super.onCreate(savedInstanceState);
 
         //getSupportActionBar().hide();
+        Objects.requireNonNull(getSupportActionBar()).setDisplayHomeAsUpEnabled(true);
+
 
         Intent intent=getIntent();
         email=intent.getStringExtra("full_name");

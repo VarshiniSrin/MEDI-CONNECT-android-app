@@ -69,6 +69,7 @@ import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
 import java.util.Locale;
+import java.util.Objects;
 
 import lecho.lib.hellocharts.model.PieChartData;
 import lecho.lib.hellocharts.model.SliceValue;
@@ -115,6 +116,7 @@ public class Firstpage extends AppCompatActivity {
         setContentView(R.layout.firstpage);
 
         //getSupportActionBar().hide();
+        Objects.requireNonNull(getSupportActionBar()).setDisplayHomeAsUpEnabled(true);
 
         Intent intent = getIntent();
          email = intent.getStringExtra("full_name");

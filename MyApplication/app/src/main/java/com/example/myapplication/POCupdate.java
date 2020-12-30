@@ -10,6 +10,8 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import java.util.Objects;
+
 public class POCupdate extends AppCompatActivity {
     ProjectDataBaseHelper myDb;
     EditText pemail,pnumber,demail,wemail;
@@ -18,7 +20,10 @@ public class POCupdate extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.pocupdate);
+
         //getSupportActionBar().hide();
+        Objects.requireNonNull(getSupportActionBar()).setDisplayHomeAsUpEnabled(true);
+
         Intent intent=getIntent();
         email=intent.getStringExtra("full_name");
         pnumber=findViewById(R.id.pn);

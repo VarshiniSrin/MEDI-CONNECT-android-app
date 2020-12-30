@@ -11,6 +11,7 @@ import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 
 import java.util.ArrayList;
+import java.util.Objects;
 
 public class DisplayReports extends AppCompatActivity {
     static ArrayList<Items_DisplayReports> items;
@@ -24,6 +25,8 @@ public class DisplayReports extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.display_reports);
+
+        Objects.requireNonNull(getSupportActionBar()).setDisplayHomeAsUpEnabled(true);
 
         text = (TextView)findViewById(R.id.text);
         Intent intent=getIntent();

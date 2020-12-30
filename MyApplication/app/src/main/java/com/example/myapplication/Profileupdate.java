@@ -12,6 +12,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import java.util.Objects;
+
 public class Profileupdate extends AppCompatActivity {
     ProjectDataBaseHelper myDb;
     EditText agetv,heighttv,weighttv,previous;
@@ -21,6 +23,10 @@ public class Profileupdate extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.profileupdate);
+
+        Objects.requireNonNull(getSupportActionBar()).setDisplayHomeAsUpEnabled(true);
+
+
         Intent intent=getIntent();
         email=intent.getStringExtra("full_name");
         agetv=findViewById(R.id.agetext);

@@ -21,6 +21,7 @@ import android.content.Intent;
 import com.airbnb.lottie.LottieAnimationView;
 
 import java.util.Locale;
+import java.util.Objects;
 
 
 public class Settings extends AppCompatActivity {
@@ -34,6 +35,9 @@ public class Settings extends AppCompatActivity {
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_settings);
+
+
+        Objects.requireNonNull(getSupportActionBar()).setDisplayHomeAsUpEnabled(true);
 
 
         animationView = (LottieAnimationView)findViewById(R.id.lottieAnimationView2);

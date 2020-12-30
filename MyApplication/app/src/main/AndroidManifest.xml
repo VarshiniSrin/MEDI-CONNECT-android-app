@@ -14,15 +14,81 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme" >
 
-        <activity android:name=".DiseasePrediction"/>
-        <activity android:name=".DisplayReports"/>
-        <activity android:name=".Firstpage"/>
+        <activity android:name=".DiseasePrediction"
+        android:parentActivityName=".Firstpage"
+            android:launchMode="singleTop">
+        <meta-data
+            android:name="android.support.PARENT_ACTIVITY"
+            android:value=".Firstpage" />
+        </activity>
+
+
+        <activity android:name=".DisplayReports"
+            android:parentActivityName=".Firstpage"
+            android:launchMode="singleTop">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Firstpage" />
+        </activity>
+
+
+        <activity android:name=".Firstpage"
+            android:parentActivityName=".MainActivity"
+            android:launchMode="singleTop">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
+        </activity>
+
+
         <activity android:name=".MainActivity"/>
-        <activity android:name=".Passwordupdate"/>
-        <activity android:name=".POCupdate"/>
-        <activity android:name=".Profileupdate"/>
-        <activity android:name=".Signup"/>
-        <activity android:name=".Settings"/>
+
+
+        <activity android:name=".Passwordupdate"
+            android:parentActivityName=".Firstpage"
+            android:launchMode="singleTop">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Firstpage" />
+        </activity>
+
+
+        <activity android:name=".POCupdate"
+            android:parentActivityName=".Firstpage"
+            android:launchMode="singleTop">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Firstpage" />
+        </activity>
+
+
+        <activity android:name=".Profileupdate"
+            android:parentActivityName=".Firstpage"
+            android:launchMode="singleTop">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Firstpage" />
+        </activity>
+
+
+        <activity android:name=".Signup"
+            android:parentActivityName=".MainActivity"
+            android:launchMode="singleTop">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
+        </activity>
+
+
+        <activity android:name=".Settings"
+            android:parentActivityName=".Firstpage"
+            android:launchMode="singleTop">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Firstpage" />
+        </activity>
+
+
         <activity android:name="com.theartofdev.edmodo.cropper.CropImageActivity" android:theme="@style/Base.Theme.AppCompat"/>
 
         <activity android:name=".Splash">
