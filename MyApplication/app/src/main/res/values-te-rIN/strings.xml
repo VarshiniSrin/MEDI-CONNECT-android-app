@@ -65,4 +65,8 @@
     <string name="Point_Of_Contact">పరిచయం యొక్క స్థానం</string>
     <string name="Change_Password">పాస్వర్డ్ మార్చండి</string>
     <string name="Settings">సెట్టింగులు</string>
+
+    <string name="Previous_Diseases_Allergies">మునుపటి వ్యాధులు / అలెర్జీలు</string>
+    <string name="Enter_previous_diseases_allergies_if_any">మునుపటి వ్యాధులు / అలెర్జీలు ఏదైనా ఉంటే నమోదు చేయండి</string>
+    <string name="Logout">లాగ్ అవుట్</string>
 </resources>

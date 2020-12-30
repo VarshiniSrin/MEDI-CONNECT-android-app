@@ -65,4 +65,8 @@
     <string name="Point_Of_Contact">ബന്ധപ്പെടേണ്ട സ്ഥലം</string>
     <string name="Change_Password">പാസ്വേഡ് മാറ്റുക</string>
     <string name="Settings">ക്രമീകരണങ്ങൾ</string>
+
+    <string name="Previous_Diseases_Allergies">മുമ്പത്തെ രോഗങ്ങൾ / അലർജി</string>
+    <string name="Enter_previous_diseases_allergies_if_any">മുമ്പത്തെ രോഗങ്ങൾ / അലർജികൾ ഉണ്ടെങ്കിൽ നൽകുക</string>
+    <string name="Logout">ലോഗൗട്ട്</string>
 </resources>

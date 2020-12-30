@@ -65,4 +65,8 @@
     <string name="Point_Of_Contact">ಸಂಪರ್ಕದ ಸ್ಥಳ</string>
     <string name="Change_Password">ಗುಪ್ತಪದವನ್ನು ಬದಲಿಸಿ</string>
     <string name="Settings">ಸಂಯೋಜನೆಗಳು</string>
+
+    <string name="Previous_Diseases_Allergies">ಹಿಂದಿನ ರೋಗಗಳು / ಅಲರ್ಜಿಗಳು</string>
+    <string name="Enter_previous_diseases_allergies_if_any">ಹಿಂದಿನ ಕಾಯಿಲೆಗಳು / ಅಲರ್ಜಿಗಳು ಯಾವುದಾದರೂ ಇದ್ದರೆ ನಮೂದಿಸಿ</string>
+    <string name="Logout">ಲಾಗ್ ಔಟ್</string>
 </resources>

@@ -65,4 +65,8 @@
     <string name="Point_Of_Contact">தொடர்பு புள்ளி</string>
     <string name="Change_Password">கடவுச்சொல்லை மாற்று</string>
     <string name="Settings">அமைப்புகள்</string>
+
+    <string name="Previous_Diseases_Allergies">முந்தைய நோய்கள் / ஒவ்வாமை</string>
+    <string name="Enter_previous_diseases_allergies_if_any">முந்தைய நோய்கள் / ஒவ்வாமை ஏதேனும் இருந்தால் உள்ளிடவும்</string>
+    <string name="Logout">வெளியேறு</string>
 </resources>
