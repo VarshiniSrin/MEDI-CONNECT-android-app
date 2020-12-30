@@ -95,7 +95,9 @@ public class Firstpage extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.firstpage);
+
         //getSupportActionBar().hide();
+
         Intent intent = getIntent();
          email = intent.getStringExtra("full_name");
         myDb = new ProjectDataBaseHelper(Firstpage.this);

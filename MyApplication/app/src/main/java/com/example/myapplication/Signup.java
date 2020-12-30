@@ -34,7 +34,9 @@ public class Signup extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        getSupportActionBar().hide();
+
+        //getSupportActionBar().hide();
+
         setContentView(R.layout.activity_sign_up);
         myDb = new ProjectDataBaseHelper(this);
 
@@ -56,7 +58,9 @@ public class Signup extends AppCompatActivity {
                     Name.setError("enter Name");
                 } else {
                     setContentView(R.layout.recordlayout);
-                    getSupportActionBar().hide();
+
+                    //getSupportActionBar().hide();
+
                     age = (EditText) findViewById(R.id.editTextNumberSigned);
                     height = (EditText) findViewById(R.id.editTextNumberSigned2);
                     weight = (EditText) findViewById(R.id.editTextNumberSigned3);
@@ -103,7 +107,9 @@ public class Signup extends AppCompatActivity {
                                 alertDialog.show();
                             } else {
                                 setContentView(R.layout.pocregistration);
-                                getSupportActionBar().hide();
+
+                                //getSupportActionBar().hide();
+
                                 p_phone = (EditText) findViewById(R.id.editTextPhone);
                                 p_email = (EditText) findViewById(R.id.editTextTextEmailAddress2);
                                 d_email = (EditText) findViewById(R.id.editTextTextEmailAddress3);

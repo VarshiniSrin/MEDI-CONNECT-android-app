@@ -17,7 +17,9 @@ public class Passwordupdate extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        getSupportActionBar().hide();
+
+        //getSupportActionBar().hide();
+
         Intent intent=getIntent();
         email=intent.getStringExtra("full_name");
         setContentView(R.layout.passwordupdate);
