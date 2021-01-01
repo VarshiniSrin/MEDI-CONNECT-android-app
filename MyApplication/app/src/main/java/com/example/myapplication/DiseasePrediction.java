@@ -133,7 +133,6 @@ public class DiseasePrediction extends AppCompatActivity {
                 PyObject obj = pyobj.callAttr("main", symptom1, symptom2, symptom3, symptom4, symptom5);
                 editText.setText(obj.toString());
 
-
                 sendSMS(obj.toString());
                 senEmail(obj.toString());
 
