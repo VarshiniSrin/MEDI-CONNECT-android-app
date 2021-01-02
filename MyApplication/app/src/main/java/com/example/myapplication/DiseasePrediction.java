@@ -4,6 +4,8 @@ import android.Manifest;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.database.Cursor;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.os.Build;
 import android.os.Bundle;
 import android.telephony.SmsManager;
@@ -133,9 +135,6 @@ public class DiseasePrediction extends AppCompatActivity {
                 PyObject obj = pyobj.callAttr("main", symptom1, symptom2, symptom3, symptom4, symptom5);
                 editText.setText(obj.toString());
 
-                sendSMS(obj.toString());
-                senEmail(obj.toString());
-
                 String symptoms = "";
                 if(!symptom1.equals("Select"))
                     symptoms+=symptom1;
@@ -148,6 +147,9 @@ public class DiseasePrediction extends AppCompatActivity {
                 if(!symptom5.equals("Select"))
                     symptoms+=(", " + symptom5);
 
+                sendSMS(obj.toString());
+                senEmail(symptoms,obj.toString(),1);
+                senEmail(symptoms,obj.toString(),2);
                 myDb.previousrecordvalues(email,symptoms, obj.toString());
 
             }
@@ -164,6 +166,8 @@ public class DiseasePrediction extends AppCompatActivity {
             phno = res.getString(0);
         }
 
+        phno.replaceAll(" ","");
+
         try{
             SmsManager sm = SmsManager.getDefault();
             sm.sendTextMessage(phno,null,message,null,null);
@@ -174,29 +178,57 @@ public class DiseasePrediction extends AppCompatActivity {
 
     }
 
-    private void senEmail(String s) {
+    private void senEmail(String symptoms, String disease, int code) {
 
         String p_g_email = null, warden_email = null, doctor_email = null;
+        String e = null, name= null,  gender= null, blood= null, previousdisease= null;
+        int age = 0, height = 0, weight = 0;
+
         Cursor res = myDb.fetchPOCEmails(email);
+        Cursor res1 = myDb.fetchprofile2(email);
+
+        while (res1.moveToNext()) {
+            e = res1.getString(0);
+            name = res1.getString(1);
+            age = res1.getInt(2);
+            gender = res1.getString(3);
+            height = res1.getInt(4);
+            weight = res1.getInt(5);
+            blood = res1.getString(6);
+            previousdisease = res1.getString(7);
+        }
 
         while (res.moveToNext()) {
             p_g_email = res.getString(0);
             warden_email = res.getString(1);
             doctor_email = res.getString(2);
         }
-        String mEmail = p_g_email+","+warden_email+","+doctor_email;
+
+        p_g_email.replaceAll(" ","");
+        warden_email.replaceAll(" ","");
+        doctor_email.replaceAll(" ","");
+
+
+        String mEmail;
+        if(code == 1)
+            mEmail = doctor_email;
+        else
+            mEmail = warden_email;
+
         System.out.println("---------------------------------------------------------------------");
         System.out.println(mEmail);
 
         String mSubject = "Diagnosis report";
-        String mMessage = s;
+        String mMessage = disease;
 
 
-        JavaMailAPI javaMailAPI = new JavaMailAPI(this, mEmail, mSubject, mMessage);
+        JavaMailAPI javaMailAPI = new JavaMailAPI(this, mEmail, mSubject, mMessage, symptoms, name,age,gender,height,weight,blood,previousdisease);
 
         javaMailAPI.execute();
         Toast.makeText(this, "message sent", Toast.LENGTH_SHORT).show();
         return;
     }
+
+
 
 }

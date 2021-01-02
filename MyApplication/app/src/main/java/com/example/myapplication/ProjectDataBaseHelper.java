@@ -84,6 +84,7 @@ public class ProjectDataBaseHelper extends SQLiteOpenHelper {
         return true;
     }
 
+
     public boolean checkUserExist(String username, String password){
         String[] columns = {"email"};
         String selection = "email=? and password=?";
@@ -147,6 +148,12 @@ public class ProjectDataBaseHelper extends SQLiteOpenHelper {
         return crs;
     }
 
+    public Cursor fetchprofile2(String email) {
+        SQLiteDatabase db=getWritableDatabase();
+        Cursor crs = db.rawQuery("select * from MEDICAL_RECORD where email = ?", new String[]{email});
+        return crs;
+    }
+
     public Cursor fetchpass(String email) {
         SQLiteDatabase db=getWritableDatabase();
         Cursor crs = db.rawQuery("select password from LOGIN where email = ?", new String[]{email});
@@ -192,6 +199,9 @@ public class ProjectDataBaseHelper extends SQLiteOpenHelper {
         }
 
     }
+
+
+
     public Cursor getdata(String name)
     {
         SQLiteDatabase db = this.getWritableDatabase();
@@ -199,6 +209,7 @@ public class ProjectDataBaseHelper extends SQLiteOpenHelper {
         Cursor data = db.rawQuery("Select newimage from mytable where email=?",new String[]{name});
         return data;
     }
+
 
     public boolean updatevalues(String name,byte[] img){
         SQLiteDatabase db=getWritableDatabase();

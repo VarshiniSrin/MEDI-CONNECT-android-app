@@ -119,7 +119,7 @@ public class Firstpage extends AppCompatActivity {
         Objects.requireNonNull(getSupportActionBar()).setDisplayHomeAsUpEnabled(true);
 
         Intent intent = getIntent();
-         email = intent.getStringExtra("full_name");
+        email = intent.getStringExtra("full_name");
         myDb = new ProjectDataBaseHelper(Firstpage.this);
         Cursor res = myDb.fetchprofile1(email);
         mDrawerLayout = findViewById(R.id.drawer_layout);
