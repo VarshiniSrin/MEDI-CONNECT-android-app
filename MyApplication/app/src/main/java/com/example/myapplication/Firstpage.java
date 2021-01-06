@@ -51,6 +51,7 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.core.app.ActivityCompat;
 
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.theartofdev.edmodo.cropper.CropImage;
 import com.theartofdev.edmodo.cropper.CropImageView;
 
@@ -117,6 +118,7 @@ public class Firstpage extends AppCompatActivity {
 
         //getSupportActionBar().hide();
         Objects.requireNonNull(getSupportActionBar()).setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setTitle(R.string.Home);
 
         Intent intent = getIntent();
         email = intent.getStringExtra("full_name");

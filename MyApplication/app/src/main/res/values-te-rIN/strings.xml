@@ -72,4 +72,10 @@
 
     <string name="Languages">భాషలు</string>
     <string name="User_Interface">వినియోగ మార్గము</string>
+
+    <string name="Home">హోమ్</string>
+    <string name="Privacy_Policy">గోప్యతా విధానం</string>
+    <string name="menu_share">భాగస్వామ్యం చేయండి</string>
+    <string name="About_Us">మా గురించి</string>
+    <string name="Symptom_Specific">లక్షణం నిర్దిష్ట తనిఖీ</string>
 </resources>

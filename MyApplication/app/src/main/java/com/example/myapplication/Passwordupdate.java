@@ -22,6 +22,7 @@ public class Passwordupdate extends AppCompatActivity {
 
         //getSupportActionBar().hide();
         Objects.requireNonNull(getSupportActionBar()).setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setTitle(R.string.Password_Change);
 
 
         Intent intent=getIntent();

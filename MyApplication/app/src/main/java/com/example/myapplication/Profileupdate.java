@@ -25,7 +25,7 @@ public class Profileupdate extends AppCompatActivity {
         setContentView(R.layout.profileupdate);
 
         Objects.requireNonNull(getSupportActionBar()).setDisplayHomeAsUpEnabled(true);
-
+        getSupportActionBar().setTitle(R.string.Profile_Update);
 
         Intent intent=getIntent();
         email=intent.getStringExtra("full_name");

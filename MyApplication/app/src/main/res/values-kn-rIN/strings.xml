@@ -72,4 +72,10 @@
 
     <string name="Languages">ಭಾಷೆಗಳು</string>
     <string name="User_Interface">ಬಳಕೆದಾರ ಇಂಟರ್ಫೇಸ್</string>
+
+    <string name="Home">ಮನೆ</string>
+    <string name="Privacy_Policy">Privacy Policy</string>
+    <string name="menu_share">ಹಂಚಿಕೊಳ್ಳಿ</string>
+    <string name="About_Us">ನಮ್ಮ ಬಗ್ಗೆ</string>
+    <string name="Symptom_Specific">ರೋಗಲಕ್ಷಣದ ನಿರ್ದಿಷ್ಟ ತಪಾಸಣೆ</string>
 </resources>

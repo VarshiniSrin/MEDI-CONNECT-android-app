@@ -72,4 +72,10 @@
 
     <string name="Languages">ഭാഷകൾ</string>
     <string name="User_Interface">ഉപയോക്തൃ ഇന്റർഫേസ്</string>
+
+    <string name="Home">വീട്</string>
+    <string name="Privacy_Policy">സ്വകാര്യതാനയം</string>
+    <string name="menu_share">പങ്കിടുക</string>
+    <string name="About_Us">ഞങ്ങളേക്കുറിച്ച്</string>
+    <string name="Symptom_Specific">രോഗലക്ഷണ നിർദ്ദിഷ്ട പരിശോധന</string>
 </resources>

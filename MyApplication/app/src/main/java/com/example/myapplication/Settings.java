@@ -38,10 +38,11 @@ public class Settings extends AppCompatActivity {
 
 
         Objects.requireNonNull(getSupportActionBar()).setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setTitle(R.string.Settings);
 
 
-        animationView = (LottieAnimationView)findViewById(R.id.lottieAnimationView2);
-        animationView.playAnimation();
+//        animationView = (LottieAnimationView)findViewById(R.id.lottieAnimationView2);
+//        animationView.playAnimation();
 
 //                                                btnToggleDark = findViewById(R.id.switch2);
 //

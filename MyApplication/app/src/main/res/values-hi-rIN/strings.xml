@@ -72,4 +72,10 @@
 
     <string name="Languages">बोली</string>
     <string name="User_Interface">प्रयोक्ता इंटरफ़ेस</string>
+
+    <string name="Home">घर</string>
+    <string name="Privacy_Policy">गोपनीयता नीति</string>
+    <string name="menu_share">शेयर</string>
+    <string name="About_Us">हमारे बारे में</string>
+    <string name="Symptom_Specific">लक्षण विशिष्ट जाँच</string>
 </resources>

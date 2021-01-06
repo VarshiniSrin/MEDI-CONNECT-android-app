@@ -37,6 +37,7 @@ public class DiseasePrediction extends AppCompatActivity {
         setContentView(R.layout.disease_prediction);
 
         Objects.requireNonNull(getSupportActionBar()).setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setTitle(R.string.Symptom_Specific);
 
         myDb = new ProjectDataBaseHelper(this);
 

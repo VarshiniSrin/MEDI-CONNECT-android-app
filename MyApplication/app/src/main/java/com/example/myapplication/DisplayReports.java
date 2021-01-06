@@ -27,6 +27,7 @@ public class DisplayReports extends AppCompatActivity {
         setContentView(R.layout.display_reports);
 
         Objects.requireNonNull(getSupportActionBar()).setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setTitle(R.string.Medical_Records);
 
         text = (TextView)findViewById(R.id.text);
         Intent intent=getIntent();

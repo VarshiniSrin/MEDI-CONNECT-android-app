@@ -45,7 +45,7 @@
     <string name="Medical_Records">Medical Records</string>
     <string name="Self_Diagonsis">Self Diagonsis</string>
     <string name="time">Time</string>
-    <string name="Password_Change">PASSWORD CHANGE</string>
+    <string name="Password_Change">Password Update</string>
     <string name="Previous_Password">Previous password</string>
     <string name="New_Password">New password</string>
     <string name="Re_Type_Password">Re-type password</string>
@@ -56,9 +56,9 @@
     <string name="Parent_Email">Parent email📩</string>
     <string name="Doctor_Email">Doctor email 📩</string>
     <string name="Register">Register</string>
-    <string name="Poc_Update">POC UPDATE</string>
+    <string name="Poc_Update">POC Update</string>
     <string name="Save_Changes">Save Changes</string>
-    <string name="Profile_Update">PROFILE UPDATE</string>
+    <string name="Profile_Update">Profile Update</string>
     <string name="Edit_Profile">Edit profile</string>
     <string name="View_Profile">View Profile</string>
     <string name="Point_Of_Contact">Point of contact</string>
@@ -71,4 +71,9 @@
 
     <string name="Languages">Languages</string>
     <string name="User_Interface">User Interface</string>
+    <string name="Home">Home</string>
+    <string name="Privacy_Policy">Privacy Policy</string>
+    <string name="menu_share">Share</string>
+    <string name="About_Us">About us</string>
+    <string name="Symptom_Specific">Symptom Specific Checkup</string>
 </resources>

@@ -23,6 +23,7 @@ public class POCupdate extends AppCompatActivity {
 
         //getSupportActionBar().hide();
         Objects.requireNonNull(getSupportActionBar()).setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setTitle(R.string.Poc_Update);
 
         Intent intent=getIntent();
         email=intent.getStringExtra("full_name");
