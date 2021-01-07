@@ -182,6 +182,26 @@ public class Firstpage extends AppCompatActivity {
                             ui.putExtra("full_name", email);
                             startActivity(ui);
                             break;
+
+                        case R.id.privacy_policy:
+                            Intent i3 = new Intent(getApplicationContext(), privacy_policy.class);
+                            startActivity(i3);
+                            break;
+
+                        case R.id.share:
+                            Intent myIntent = new Intent(Intent.ACTION_SEND);
+                            myIntent.setType("text/plain");
+                            String shareBody ="Your body here";
+                            String shareSub = "Your Subject here";
+                            myIntent.putExtra(Intent.EXTRA_SUBJECT, shareSub);
+                            myIntent.putExtra(Intent.EXTRA_TEXT, shareBody);
+                            startActivity(Intent.createChooser(myIntent, "Share Using"));
+                            break;
+
+                        case R.id.about_us:
+                            startActivity(new Intent(getApplicationContext(), about_us.class));
+                            overridePendingTransition(0,0);
+                            break;
                     }
                     return true;
                 });

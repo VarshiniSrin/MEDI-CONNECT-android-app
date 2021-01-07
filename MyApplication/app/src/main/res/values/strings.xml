@@ -76,4 +76,11 @@
     <string name="menu_share">Share</string>
     <string name="About_Us">About us</string>
     <string name="Symptom_Specific">Symptom Specific Checkup</string>
+
+    <string name="privacy">We built this app as a free app. This service is provided at no cost and is intended for use as is. This page is used to inform visitors regarding our policies with the collection, use, and disclosure of personal Information.\n\nInformation Collection and Use\nWe do not collect any information of our app\'s users.\n\nCookies\nThis service does not use cookies.\n\nService Providers\nWe do not employ any third–party companies or individuals.\n\nChanges to This Privacy Policy\nWe may update our Privacy Policy from time to time. Thus, you are advised to review this page periodically for any changes.\n\nPrivacy Policy on this page\nThis policy is effective as of 31/12/2020.</string>
+    <string name="Browser">Check out our website</string>
+    <string name="Email">Contact us through email</string>
+    <string name="Instagram">Check out our instagram</string>
+    <string name="Maps">Check out our location</string>
+
 </resources>

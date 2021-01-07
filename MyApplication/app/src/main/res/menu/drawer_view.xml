@@ -15,5 +15,22 @@
         android:title="@string/Change_Password">
     </item>
 
+    <item
+        android:id="@+id/privacy_policy"
+        android:title="@string/Privacy_Policy">
+    </item>
+
+    <item
+        android:id="@+id/share"
+        android:icon="@android:drawable/ic_menu_share"
+        android:title="@string/menu_share">
+    </item>
+
+    <item
+        android:id="@+id/about_us"
+        android:icon="@android:drawable/ic_menu_info_details"
+        android:title="@string/About_Us">
+    </item>
+
 
     </menu>

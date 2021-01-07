@@ -18,7 +18,6 @@ import android.widget.TextView;
 import android.widget.Button;
 import android.content.Intent;
 
-import com.airbnb.lottie.LottieAnimationView;
 
 import java.util.Locale;
 import java.util.Objects;
@@ -26,7 +25,6 @@ import java.util.Objects;
 
 public class Settings extends AppCompatActivity {
 
-    LottieAnimationView animationView;
 
 //                                                   private Button btnToggleDark;
 
@@ -41,8 +39,6 @@ public class Settings extends AppCompatActivity {
         getSupportActionBar().setTitle(R.string.Settings);
 
 
-//        animationView = (LottieAnimationView)findViewById(R.id.lottieAnimationView2);
-//        animationView.playAnimation();
 
 //                                                btnToggleDark = findViewById(R.id.switch2);
 //

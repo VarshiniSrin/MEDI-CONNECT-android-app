@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background11"
+    tools:context=".about_us">
+
+    <TextView
+        android:id="@+id/text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="@string/app_name"
+        android:textSize="22sp"
+        android:translationY="90dp" />
+
+    <TextView
+        android:id="@+id/text2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="~Raghavendra, Prajwal and Varshini"
+        android:textSize="15sp"
+        android:translationY="120dp" />
+
+    <TextView
+        android:id="@+id/textBrowser"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:text="@string/Browser"
+        android:textAlignment="center"
+        android:gravity="center_horizontal"
+        android:textSize="15dp"
+        android:translationX="50dp"
+        android:translationY="280dp" />
+
+    <TextView
+        android:id="@+id/textEmail"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:text="@string/Email"
+        android:textAlignment="center"
+        android:gravity="center_horizontal"
+        android:textSize="15dp"
+        android:translationX="240dp"
+        android:translationY="280dp"/>
+
+    <TextView
+        android:id="@+id/textInstagram"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:text="@string/Instagram"
+        android:textSize="15dp"
+        android:textAlignment="center"
+        android:translationX="50dp"
+        android:translationY="460dp"
+        android:gravity="center_horizontal" />
+
+
+    <TextView
+        android:id="@+id/textMaps"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:textSize="15dp"
+        android:textAlignment="center"
+        android:text="@string/Maps"
+        android:translationX="240dp"
+        android:translationY="460dp"
+        android:gravity="center_horizontal" />
+
+    <GridView
+        android:id="@+id/gridview"
+        android:layout_width="350dp"
+        android:layout_height="350dp"
+        android:layout_centerHorizontal="true"
+        android:adjustViewBounds="true"
+        android:columnWidth="90dp"
+        android:gravity="center"
+        android:horizontalSpacing="25dp"
+        android:numColumns="2"
+        android:translationY="190dp"
+        android:verticalSpacing="90dp" />
+
+
+</RelativeLayout>

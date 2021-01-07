@@ -14,6 +14,15 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme" >
 
+        <activity android:name=".about_us"
+            android:parentActivityName=".Firstpage"
+            android:launchMode="singleTop">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Firstpage" />
+        </activity>
+
+
         <activity android:name=".DiseasePrediction"
         android:parentActivityName=".Firstpage"
             android:launchMode="singleTop">
@@ -62,6 +71,15 @@
         </activity>
 
 
+        <activity android:name=".privacy_policy"
+            android:parentActivityName=".Firstpage"
+            android:launchMode="singleTop">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Firstpage" />
+        </activity>
+
+
         <activity android:name=".Profileupdate"
             android:parentActivityName=".Firstpage"
             android:launchMode="singleTop">
@@ -81,6 +99,15 @@
 
 
         <activity android:name=".Settings"
+            android:parentActivityName=".Firstpage"
+            android:launchMode="singleTop">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Firstpage" />
+        </activity>
+
+
+        <activity android:name=".share"
             android:parentActivityName=".Firstpage"
             android:launchMode="singleTop">
             <meta-data
