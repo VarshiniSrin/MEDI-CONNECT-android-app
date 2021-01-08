@@ -31,8 +31,8 @@
     <string name="NEXT">NEXT</string>
     <string name="Full_Name">Full Name</string>
     <string name="Age">Age</string>
-    <string name="Height">Height</string>
-    <string name="Weight">Weight</string>
+    <string name="Height">Height (cm)</string>
+    <string name="Weight">Weight (kg)</string>
     <string name="Welcome">WELCOME ! Get registered to use the App.😊</string>
     <string name="Enter_Symptoms">Enter symptoms</string>
     <string name="Symptom_1">Symptom 1</string>
@@ -82,5 +82,6 @@
     <string name="Email">Contact us through email</string>
     <string name="Instagram">Check out our instagram</string>
     <string name="Maps">Check out our location</string>
+    <string name="General_Checkup">General Checkup</string>
 
 </resources>

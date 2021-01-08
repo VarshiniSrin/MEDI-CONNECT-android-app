@@ -397,7 +397,7 @@ public class Firstpage extends AppCompatActivity {
         //setData();
     }
     public  void p(View view) {
-        Intent intent = new Intent(getApplicationContext(),DiseasePrediction.class);
+        Intent intent = new Intent(getApplicationContext(),GeneralCheckup.class);
         intent.putExtra("full_name", email);
         startActivity(intent);
         //setData();

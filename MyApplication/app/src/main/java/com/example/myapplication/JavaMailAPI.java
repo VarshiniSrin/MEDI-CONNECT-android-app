@@ -47,7 +47,7 @@ public class JavaMailAPI extends AsyncTask<Void, Void, Void> {
         this.previousdisease = previousdisease;
         this.message = message;
 
-        this.message1 = " <div style=\"height : 250px; width: 550px; margin: 0; border-style: solid; padding: 5px; border-width: 2px; border-color: black;background-image: linear-gradient(to right, #00dbde 0%, #fc00ff 100%);\">";
+        this.message1 = " <div style=\"height : 400px; width: 550px; margin: 0; border-style: solid; padding: 5px; border-width: 2px; border-color: black;background-image: linear-gradient(to right, #00dbde 0%, #fc00ff 100%);\">";
         this.message1 += " <div style = \" position: absolute;top: 160px; left: 160px;\">";
         this.message1 += "<pre>";
         this.message1 += "<header style=\"display: flex; align-items: center; border-bottom: 1px solid#000;\">";
@@ -55,13 +55,26 @@ public class JavaMailAPI extends AsyncTask<Void, Void, Void> {
         this.message1 += "</header>";
         this.message1 += "<div style = \" position: absolute;top: 50px; left: 20px ;line-height: 0.5;\">";
         this.message1 += "<p>";
+        this.message1 += "<p style= \"font-size: 15px\">" +
+                "<b><i>Name : </i></b><b><i>"+ name + "<br/></i></p>" +
+
+                "<span style=\"float: center;\">" +
+                "<p></b><b>" +
+                "Age : </b>" + age + "<br/>" +
+                "<br/><br/>" +
+                "</span></p>" +
+
+                "<p><b>Gender : </b>" + gender +"<br/><br/><br/><br/><b>" +
+                "Height : </b>"+ height + " cm<br/><br/><br/><br/><b>" +
+                "Weight : </b>" + weight + " kg<br/></p><br/><br/><br/>" +
+
+
+                "<p><b>Blood group : </b>" + blood + "<br/><br/><br/><br/><b>" +
+                "Medical history : </b>" + previousdisease + "</p>\n";
         this.message1 += "<p>" +
-                "<b>Name : </b>"+ name + "<b>             Age : </b>" + age + "</p><p>" +
-                "<b>Gender : </b>" + gender +"<b>      Height : </b>"+ height + "<b>      Weight : </b>" + weight + "</p><p><b>Blood group : </b>" + blood + "<b>         Medical history : </b>" + previousdisease + "</p>\n";
+                "<b>Symptoms experiencing : </b><b>" + symptoms + "</b></p>\n";
         this.message1 += "<p>" +
-                "<b>Symptoms experiencing : </b>" + symptoms + "</p>\n";
-        this.message1 += "<p>" +
-                "<b>Possible condition/disease : </b>" + message + "</p><br/>\n";
+                "<b>Possible condition/disease : </b><b>" + message + "</b></p><br/>\n";
         this.message1 += "<p>";
         this.message1 += "</div>";
         this.message1 += "</pre>";

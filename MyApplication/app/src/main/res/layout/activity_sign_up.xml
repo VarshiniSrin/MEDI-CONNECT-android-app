@@ -12,7 +12,7 @@
         android:id="@+id/view"
         android:layout_width="match_parent"
         android:layout_height="90dp"
-        android:background="#FF4081"
+        android:background="#673AB7"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -58,11 +58,13 @@
 
     <EditText
         android:id="@+id/editTextTextPersonName"
-        android:layout_width="247dp"
-        android:layout_height="54dp"
+        android:layout_width="218dp"
+        android:layout_height="39dp"
         android:layout_marginTop="68dp"
         android:ems="10"
         android:hint="@string/Full_Name"
+        android:background="@drawable/roundcorners"
+        android:gravity="center"
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.506"
@@ -71,11 +73,13 @@
 
     <EditText
         android:id="@+id/editTextTextPassword"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="72dp"
+        android:layout_width="218dp"
+        android:layout_height="39dp"
+        android:layout_marginTop="60dp"
         android:ems="10"
         android:hint="@string/Password"
+        android:background="@drawable/roundcorners"
+        android:gravity="center"
         android:inputType="textPassword"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -83,14 +87,16 @@
 
     <EditText
         android:id="@+id/editTextTextEmailAddress"
-        android:layout_width="246dp"
-        android:layout_height="48dp"
-        android:layout_marginTop="48dp"
+        android:layout_width="218dp"
+        android:layout_height="39dp"
+        android:layout_marginTop="60dp"
+        android:background="@drawable/roundcorners"
         android:ems="10"
+        android:gravity="center"
         android:hint="@string/Email_ID"
         android:inputType="textEmailAddress"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.503"
+        app:layout_constraintHorizontal_bias="0.507"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName" />
 

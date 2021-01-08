@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_width="match_parent"
+            android:paddingRight="10dp"
+            android:layout_height="match_parent"
+            tools:context=".GeneralCheckup"
+            android:paddingEnd="10dp"
+            tools:ignore="RtlSymmetry">
+
+
+            <TextView
+                android:id="@+id/text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:paddingLeft="20dp"
+                android:text="Are you experiencing any of the following?"
+                android:textColor="#000000"
+                android:textSize="20dp"
+                android:paddingStart="20dp"
+                tools:ignore="RtlSymmetry" />
+
+            <CheckBox
+                android:id="@+id/checkBox1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_below="@+id/text"
+                android:text="Common Cold\nSneezing, runny of stuffy nose, sore throat, cough"
+                android:paddingStart="20dp"
+                tools:ignore="RtlSymmetry" />
+
+            <CheckBox
+                android:id="@+id/checkBox2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_below="@+id/checkBox1"
+                android:text="Ear infection\nEar pain, fever"
+                android:paddingStart="20dp"
+                tools:ignore="RtlSymmetry" />
+
+            <CheckBox
+                android:id="@+id/checkBox3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_below="@+id/checkBox2"
+                android:text="Flu(Influenza)\nFever, cough, sore throat, runny or stuffy nose, body aches"
+                android:paddingStart="20dp"
+                tools:ignore="RtlSymmetry" />
+
+            <CheckBox
+                android:id="@+id/checkBox4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_below="@+id/checkBox3"
+                android:text="Sinus infection\nHeadache, runny or stuffy nose, face pain or pressure"
+                android:paddingStart="20dp"
+                tools:ignore="RtlSymmetry" />
+
+            <CheckBox
+                android:id="@+id/checkBox5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_below="@+id/checkBox4"
+                android:text="Sore throat\nThroat pain, hoarseness"
+                android:paddingStart="20dp"
+                tools:ignore="RtlSymmetry" />
+
+            <CheckBox
+                android:id="@+id/checkBox6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_below="@+id/checkBox5"
+                android:text="Allergies\nItchiness, Eye irritation, Hives or skin rashes, Wheezing etc"
+                android:paddingStart="20dp"
+                tools:ignore="RtlSymmetry" />
+
+            <CheckBox
+                android:id="@+id/checkBox7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_below="@+id/checkBox6"
+                android:text="Conjuctivitis (pink eye)\n Redness, itching, tearing, pus-like discharge from eyes"
+                android:paddingStart="20dp"
+                tools:ignore="RtlSymmetry" />
+
+            <CheckBox
+                android:id="@+id/checkBox8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_below="@+id/checkBox7"
+                android:text="Diarrhea\n Watery loose stools, frequent bowel movement"
+                android:paddingStart="20dp"
+                tools:ignore="RtlSymmetry" />
+
+            <CheckBox
+                android:id="@+id/checkBox9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_below="@+id/checkBox8"
+                android:text="Migraine\n Pulsing, throbbing pain in your head"
+                android:paddingStart="20dp"
+                tools:ignore="RtlSymmetry" />
+
+            <CheckBox
+                android:id="@+id/checkBox10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_below="@+id/checkBox9"
+                android:text="Stomach aches\nNausea and vomiting"
+                android:paddingStart="20dp"
+                tools:ignore="RtlSymmetry" />
+
+            <Button
+                android:id="@+id/sendSMS"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/checkBox10"
+                android:text="SEND SMS" />
+
+            <Button
+                android:id="@+id/button2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/sendSMS"
+                android:text="SYMPTOM SPECIFIC CHECKUP" />
+
+
+
+
+
+        </RelativeLayout>
+
+    </ScrollView>
+</LinearLayout>

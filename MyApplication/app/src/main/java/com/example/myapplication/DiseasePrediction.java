@@ -42,7 +42,10 @@ public class DiseasePrediction extends AppCompatActivity {
         myDb = new ProjectDataBaseHelper(this);
 
         Intent intent=getIntent();
-        email=intent.getStringExtra("full_name");
+        email=intent.getStringExtra("full");
+
+        System.out.println("--------------------------------------------------------------");
+        System.out.println(email);
 
         if(Build.VERSION.SDK_INT>=Build.VERSION_CODES.M){
             if(checkSelfPermission(Manifest.permission.SEND_SMS) == PackageManager.PERMISSION_GRANTED){
@@ -161,8 +164,8 @@ public class DiseasePrediction extends AppCompatActivity {
 
     private void sendSMS(String message){
         String phno = null;
-
         Cursor res = myDb.fetchPOCNumber(email);
+
         while (res.moveToNext()) {
             phno = res.getString(0);
         }
@@ -176,7 +179,6 @@ public class DiseasePrediction extends AppCompatActivity {
         } catch (Exception e) {
             Toast.makeText(this,"sms not sent",Toast.LENGTH_SHORT).show();
         }
-
     }
 
     private void senEmail(String symptoms, String disease, int code) {
