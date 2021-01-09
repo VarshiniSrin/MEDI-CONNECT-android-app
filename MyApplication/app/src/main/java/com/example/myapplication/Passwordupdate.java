@@ -2,7 +2,9 @@ package com.example.myapplication;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.database.Cursor;
 import android.os.Bundle;
 import android.text.TextUtils;
@@ -16,6 +18,13 @@ public class Passwordupdate extends AppCompatActivity {
     ProjectDataBaseHelper myDb;
     EditText opswd,npswd,rpswd;
     String email;
+
+    public static final String MyPREFERENCES = "MyPrefs" ;
+    public static final String pass = "phoneKey";
+    public static final String username = "emailKey";
+    public static final String userlogin= "userlogin" ;
+    SharedPreferences sharedpreferences;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -25,8 +34,12 @@ public class Passwordupdate extends AppCompatActivity {
         getSupportActionBar().setTitle(R.string.Password_Change);
 
 
+        sharedpreferences = getSharedPreferences(MyPREFERENCES, Context.MODE_PRIVATE);
+
+
         Intent intent=getIntent();
         email=intent.getStringExtra("full_name");
+
         setContentView(R.layout.passwordupdate);
         opswd=findViewById(R.id.prevpswd);
         npswd=findViewById(R.id.newpswd);
@@ -49,10 +62,19 @@ public class Passwordupdate extends AppCompatActivity {
             if (s.equals(s1)) {
 
                 if (new_pswd.equals(re_pswd)) {
-
-myDb.passupdate(email,re_pswd);
+                    myDb.passupdate(email,re_pswd);
+                    SharedPreferences.Editor editor = sharedpreferences.edit();
+                    editor.putString(pass, new_pswd.toString());
                     Toast.makeText(this, "saved successfully", Toast.LENGTH_SHORT).show();
-                } else {
+
+
+                    Intent ui = new Intent(getApplicationContext(), Firstpage.class);
+                    ui.putExtra("full_name", email);
+                    startActivity(ui);
+
+                }
+
+                else {
                     npswd.setError("password mismatch");
                     rpswd.setError("password mismatch");
                 }
@@ -63,6 +85,8 @@ myDb.passupdate(email,re_pswd);
             }
 
         }
+
+
     }
 
 

@@ -94,7 +94,16 @@
 \nನಾವು ಕಾಲಕಾಲಕ್ಕೆ ನಮ್ಮ ಗೌಪ್ಯತೆ ನೀತಿಯನ್ನು ನವೀಕರಿಸಬಹುದು. ಆದ್ದರಿಂದ, ಯಾವುದೇ ಬದಲಾವಣೆಗಳಿಗಾಗಿ ನಿಯತಕಾಲಿಕವಾಗಿ ಈ ಪುಟವನ್ನು ಪರಿಶೀಲಿಸಲು ನಿಮಗೆ ಸೂಚಿಸಲಾಗುತ್ತದೆ.
 
 \n\nಈ ಪುಟದಲ್ಲಿ ಗೌಪ್ಯತೆ ನೀತಿ
-\nಈ ನೀತಿ 31/12/2020 ರಿಂದ ಜಾರಿಯಾಗಿದೆ.</string>
+\nಈ ನೀತಿ 31/12/2021 ರಿಂದ ಜಾರಿಯಾಗಿದೆ.</string>
 
+    <string name="Browser">ನಮ್ಮ ವೆಬ್‌ಸೈಟ್ ಪರಿಶೀಲಿಸಿ</string>
+    <string name="Email">ಇಮೇಲ್ ಮೂಲಕ ನಮ್ಮನ್ನು ಸಂಪರ್ಕಿಸಿ</string>
+    <string name="Instagram">ನಮ್ಮ ಇನ್ಸ್ಟಾಗ್ರಾಮ್ ಪರಿಶೀಲಿಸಿ</string>
+    <string name="Maps">ನಮ್ಮ ಸ್ಥಳವನ್ನು ಪರಿಶೀಲಿಸಿ</string>
+    <string name="General_Checkup">ಸಾಮಾನ್ಯ ತಪಾಸಣೆ</string>
 
+    <string name="Privacy_policy">ಗೌಪ್ಯತಾ ನೀತಿ</string>
+    <string name="Your_total_steps">ನಿಮ್ಮ ಒಟ್ಟು ಹಂತಗಳು</string>
+    <string name="Today">ಇಂದು:</string>
+    <string name="This_Month">ಈ ತಿಂಗಳು :</string>
 </resources>

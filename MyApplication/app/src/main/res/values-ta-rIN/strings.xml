@@ -94,7 +94,16 @@
 \nநாங்கள் எங்கள் தனியுரிமைக் கொள்கையை அவ்வப்போது புதுப்பிக்கலாம். எனவே, எந்த மாற்றங்களுக்கும் இந்த பக்கத்தை அவ்வப்போது மதிப்பாய்வு செய்ய அறிவுறுத்தப்படுகிறீர்கள்.
 
 \n\nஇந்த பக்கத்தில் தனியுரிமைக் கொள்கை
-\nஇந்த கொள்கை 31/12/2020 முதல் நடைமுறைக்கு வருகிறது.</string>
+\nஇந்த கொள்கை 31/12/2021 முதல் நடைமுறைக்கு வருகிறது.</string>
 
+    <string name="Browser">எங்கள் வலைத்தளத்தைப் பாருங்கள்</string>
+    <string name="Email">மின்னஞ்சல் மூலம் எங்களை தொடர்பு கொள்ளவும்</string>
+    <string name="Instagram">எங்கள் இன்ஸ்டாகிராம் பாருங்கள்</string>
+    <string name="Maps">எங்கள் இருப்பிடத்தைப் பாருங்கள்</string>
+    <string name="General_Checkup">பொது சோதனை</string>
 
+    <string name="Privacy_policy">தனியுரிமைக் கொள்கை</string>
+    <string name="Your_total_steps">உங்கள் மொத்த படிகள்</string>
+    <string name="Today">இன்று:</string>
+    <string name="This_Month">இந்த மாதம் :</string>
 </resources>

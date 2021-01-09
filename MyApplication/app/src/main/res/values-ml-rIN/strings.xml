@@ -88,6 +88,17 @@
         \ n \ n ഈ സ്വകാര്യതാ നയത്തിലേക്ക് മാറ്റങ്ങൾ
         \ n ഞങ്ങൾ സമയാസമയങ്ങളിൽ ഞങ്ങളുടെ സ്വകാര്യതാ നയം അപ്‌ഡേറ്റുചെയ്യാം. അതിനാൽ, ഏത് മാറ്റത്തിനും ഇടയ്ക്കിടെ ഈ പേജ് അവലോകനം ചെയ്യാൻ നിങ്ങളോട് നിർദ്ദേശിക്കുന്നു.
         \ n \ n ഈ പേജിലെ സ്വകാര്യതാ നയം
-        \ n ഈ നയം 31/12/2020 മുതൽ പ്രാബല്യത്തിൽ വരും.
+        \ n ഈ നയം 31/12/2021 മുതൽ പ്രാബല്യത്തിൽ വരും.
     </string>
+
+    <string name="Browser">ഞങ്ങളുടെ വെബ്സൈറ്റ് പരിശോധിക്കുക</string>
+    <string name="Email">ഇമെയിൽ വഴി ഞങ്ങളെ ബന്ധപ്പെടുക</string>
+    <string name="Instagram">ഞങ്ങളുടെ ഇൻസ്റ്റാഗ്രാം പരിശോധിക്കുക</string>
+    <string name="Maps">ഞങ്ങളുടെ സ്ഥാനം പരിശോധിക്കുക</string>
+    <string name="General_Checkup">പൊതു പരിശോധന</string>
+
+    <string name="Privacy_policy">സ്വകാര്യതാനയം</string>
+    <string name="Your_total_steps">നിങ്ങളുടെ മൊത്തം ഘട്ടങ്ങൾ</string>
+    <string name="Today">ഇന്ന്:</string>
+    <string name="This_Month">ഈ മാസം :</string>
 </resources>

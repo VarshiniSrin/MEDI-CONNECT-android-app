@@ -1,6 +1,7 @@
 package com.example.myapplication;
 
 import android.content.Context;
+import android.content.SharedPreferences;
 import android.os.AsyncTask;
 import android.widget.Toast;
 
@@ -27,12 +28,15 @@ public class JavaMailAPI extends AsyncTask<Void, Void, Void> {
     private Session session;
     private String email, subject, message,message1;
     String symptoms, name,  gender, blood, previousdisease;
-    int age, height, weight;
+    int age, height, weight, total;
     String currentDateTimeString = java.text.DateFormat.getDateTimeInstance().format(new Date());
 
 
 
-    public JavaMailAPI(Context context, String email, String subject, String message, String symptoms, String name, int age,String gender, int height, int weight, String blood, String previousdisease) {
+
+
+    public JavaMailAPI(Context context, String email, String subject, String message, String symptoms, String name, int age,String gender, int height, int weight, String blood, String previousdisease, int total) {
+
 
         this.context = context;
         this.email = email;
@@ -45,9 +49,10 @@ public class JavaMailAPI extends AsyncTask<Void, Void, Void> {
         this.weight = weight;
         this.blood = blood;
         this.previousdisease = previousdisease;
+        this.total=total;
         this.message = message;
 
-        this.message1 = " <div style=\"height : 400px; width: 550px; margin: 0; border-style: solid; padding: 5px; border-width: 2px; border-color: black;background-image: linear-gradient(to right, #00dbde 0%, #fc00ff 100%);\">";
+        this.message1 = " <div style=\" height : 550px; width: 550px; margin: 0; border-style: solid; padding: 5px; border-width: 2px; border-color: black;background-image: linear-gradient(to right, #00dbde 0%, #fc00ff 100%);\">";
         this.message1 += " <div style = \" position: absolute;top: 160px; left: 160px;\">";
         this.message1 += "<pre>";
         this.message1 += "<header style=\"display: flex; align-items: center; border-bottom: 1px solid#000;\">";
@@ -55,7 +60,7 @@ public class JavaMailAPI extends AsyncTask<Void, Void, Void> {
         this.message1 += "</header>";
         this.message1 += "<div style = \" position: absolute;top: 50px; left: 20px ;line-height: 0.5;\">";
         this.message1 += "<p>";
-        this.message1 += "<p style= \"font-size: 15px\">" +
+        this.message1 += "<p style= \"font-size: 15px; color:#000000\">" +
                 "<b><i>Name : </i></b><b><i>"+ name + "<br/></i></p>" +
 
                 "<span style=\"float: center;\">" +
@@ -68,9 +73,11 @@ public class JavaMailAPI extends AsyncTask<Void, Void, Void> {
                 "Height : </b>"+ height + " cm<br/><br/><br/><br/><b>" +
                 "Weight : </b>" + weight + " kg<br/></p><br/><br/><br/>" +
 
+                "<p><b>Blood group : </b>" + blood + "<br/><br/></p><br/><br/><b>" +
 
-                "<p><b>Blood group : </b>" + blood + "<br/><br/><br/><br/><b>" +
-                "Medical history : </b>" + previousdisease + "</p>\n";
+                "<p>Number of steps so far this month : </b>" + total + " <br/></p><br/><br/><br/>" +
+
+                "<p>Medical history : </b>" + previousdisease + "</p>\n";
         this.message1 += "<p>" +
                 "<b>Symptoms experiencing : </b><b>" + symptoms + "</b></p>\n";
         this.message1 += "<p>" +
@@ -81,23 +88,6 @@ public class JavaMailAPI extends AsyncTask<Void, Void, Void> {
         this.message1 += "</div>";
         this.message1 += "</div>";
 
-
-
-
-//        this.message1 = "<div style=\"   height : 750px; width: 770px; margin: 0; background: \"https://i.ibb.co/jwyL3wH/16096103473985799850665529504209.jpg\"; border-style: solid; padding: 20px; border-width: 2px; border-color: black;\">";
-//        this.message1 += "<div style = \" position: absolute; bottom: 60px; left: 200px;\">";
-//        this.message1 += "<pre>";
-//        this.message1 += "<header style=\"display: flex; align-items: center; border-bottom: 1px solid #000; padding: 5px\";>";
-//        this.message1 += "<span style=\"float: left;\"><h2>MEDICAL REPORT</h2></span><span>                             Date : " + currentDateTimeString + "</span>\n";
-//        this.message1 += "</header>";
-//        this.message1 += "<p>";
-//        this.message1 += "<p><b>Name : </b>" + name + "<b>             Age : </b>" + age + "</p><p><b>Gender : </b>" + gender + "<b>      Height : </b>" + height + "<b>      Weight : </b>" + weight + "</p><p><b>Blood group : </b>" + blood + "<b>         Medical history : </b>" + previousdisease + "</p>\n";
-//        this.message1 += "<p><b>Symptoms experiencing : </b>" + symptoms + "</p>\n";
-//        this.message1 += "<p><b>Possible condition/disease : </b>" + message + "</p><br/>\n";
-//        this.message1 += "<p>";
-//        this.message1 += "</pre>";
-//        this.message1 += "</div>";
-//        this.message1 += "</div>";
     }
 
     @Override

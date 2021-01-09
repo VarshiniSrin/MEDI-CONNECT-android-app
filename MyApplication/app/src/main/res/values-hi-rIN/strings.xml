@@ -94,7 +94,16 @@
         \nहम समय-समय पर अपनी गोपनीयता नीति को अपडेट कर सकते हैं। इस प्रकार, आपको किसी भी परिवर्तन के लिए समय-समय पर इस पृष्ठ की समीक्षा करने की सलाह दी जाती है।
 
         \n\nइस पृष्ठ पर गोपनीयता नीति
-        \nयह नीति 31/12/2020 के रूप में प्रभावी है।</string>
+        \nयह नीति 31/12/2021 के रूप में प्रभावी है।</string>
 
+    <string name="Browser">हमारी वेबसाइट देखो</string>
+    <string name="Email">हमें ईमेल के माध्यम से संपर्क करें</string>
+    <string name="Instagram">हमारे इंस्टाग्राम की जाँच करें</string>
+    <string name="Maps">हमारे स्थान की जाँच करें</string>
+    <string name="General_Checkup">सामान्य जाँच</string>
 
+    <string name="Privacy_policy">गोपनीयता नीति</string>
+    <string name="Your_total_steps">आपके कुल चरण</string>
+    <string name="Today">आज :</string>
+    <string name="This_Month">इस महीने :</string>
 </resources>

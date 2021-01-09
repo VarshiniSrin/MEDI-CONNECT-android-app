@@ -71,7 +71,11 @@ public class Profileupdate extends AppCompatActivity {
         }
         myDb.updateprofile(email,ua,uh,uw,previous.getText().toString());
         Toast.makeText(this, "Profile updated successfully", Toast.LENGTH_SHORT).show();
-        startActivity(new Intent(getApplicationContext(),Firstpage.class));
+
+
+        Intent ui = new Intent(getApplicationContext(), Firstpage.class);
+        ui.putExtra("full_name", email);
+        startActivity(ui);
     }
 
     public void edit(View view) {

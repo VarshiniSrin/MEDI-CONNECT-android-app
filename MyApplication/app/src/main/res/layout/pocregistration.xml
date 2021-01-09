@@ -5,6 +5,7 @@
     android:id="@+id/relativeLayout3"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/img12"
     tools:layout_editor_absoluteX="8dp"
     tools:layout_editor_absoluteY="8dp">
 
@@ -27,7 +28,7 @@
         android:id="@+id/view3"
         android:layout_width="match_parent"
         android:layout_height="95dp"
-        android:background="#FFD600"
+        android:background="#673AB7"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -39,7 +40,7 @@
         android:layout_marginTop="24dp"
         android:text="@string/Some_More"
         android:textAppearance="@style/TextAppearance.AppCompat.Body2"
-        android:textColor="#D50000"
+        android:textColor="#2196F3"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

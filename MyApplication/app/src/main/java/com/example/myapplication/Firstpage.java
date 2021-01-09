@@ -97,6 +97,9 @@ public class Firstpage extends AppCompatActivity {
 
     String email;
     ImageView editImage;
+
+    private String your_total,today,this_month;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -124,6 +127,12 @@ public class Firstpage extends AppCompatActivity {
         email = intent.getStringExtra("full_name");
         myDb = new ProjectDataBaseHelper(Firstpage.this);
         Cursor res = myDb.fetchprofile1(email);
+
+
+        your_total= getString(R.string.Your_total_steps);
+        today= getString(R.string.Today);
+        this_month= getString(R.string.This_Month);
+
         mDrawerLayout = findViewById(R.id.drawer_layout);
         NavigationView navigationView = findViewById(R.id.nav_view);
         View headerView = navigationView.getHeaderView(0);
@@ -131,6 +140,7 @@ public class Firstpage extends AppCompatActivity {
         TextView navUsername1 = (TextView) headerView.findViewById(R.id.age);
         TextView navUsername2= (TextView) headerView.findViewById(R.id.height);
         TextView navUsername3 = (TextView) headerView.findViewById(R.id.weight);
+
         while (res.moveToNext()) {
             navUsername.setText(res.getString(0));
             navUsername1.setText(res.getString(1));
@@ -185,6 +195,7 @@ public class Firstpage extends AppCompatActivity {
 
                         case R.id.privacy_policy:
                             Intent i3 = new Intent(getApplicationContext(), privacy_policy.class);
+                            i3.putExtra("full_name", email);
                             startActivity(i3);
                             break;
 
@@ -195,6 +206,7 @@ public class Firstpage extends AppCompatActivity {
                             String shareSub = "Your Subject here";
                             myIntent.putExtra(Intent.EXTRA_SUBJECT, shareSub);
                             myIntent.putExtra(Intent.EXTRA_TEXT, shareBody);
+                            myIntent.putExtra("full_name", email);
                             startActivity(Intent.createChooser(myIntent, "Share Using"));
                             break;
 
@@ -261,6 +273,7 @@ public class Firstpage extends AppCompatActivity {
         editor.putBoolean(userlogin, false);
         editor.commit();
         finish();
+        finishAffinity();
     }
 
     @Override
@@ -367,8 +380,10 @@ public class Firstpage extends AppCompatActivity {
         // tvR.setText(Integer.toString(totalsteps));
         // Set the data and color to the pie chart
         pieData.clear();
-        pieData.add(new SliceValue( Integer.parseInt(Integer.toString(stepCount)), Color.MAGENTA).setLabel("Today : "+Integer.toString(stepCount)));
-        pieData.add(new SliceValue(Integer.parseInt(Integer.toString(total)), Color.BLUE).setLabel("This Month : "+Integer.toString(total)));
+        pieData.add(new SliceValue( Integer.parseInt(Integer.toString(stepCount)), Color.MAGENTA).setLabel(today + Integer.toString(stepCount)));
+        pieData.add(new SliceValue(Integer.parseInt(Integer.toString(total)), Color.BLUE).setLabel(this_month + Integer.toString(total)));
+
+
         //pieData.add(new SliceValue(10, Color.RED).setLabel("Q3: $18"));
         // pieData.add(new SliceValue(Integer.parseInt(tvR.getText().toString()), Color.MAGENTA).setLabel("total"));
 
@@ -376,7 +391,7 @@ public class Firstpage extends AppCompatActivity {
         pieChartData.setHasLabels(true).setValueLabelTextSize(14);
 
         // pieChartData.setHasCenterCircle(true).setCenterText1("STEPS").setCenterText1FontSize(20).setCenterText1Color(Color.parseColor("#0097A7"));
-        pieChartData.setHasCenterCircle(true).setCenterText1("Your Total Steps ").setCenterText2(Integer.toString(totalsteps)).setCenterText2FontSize(25).setCenterText1FontSize(15).setCenterText1Color(Color.parseColor("#0097A7")).setCenterText2Color(Color.parseColor("#FF0000"));
+        pieChartData.setHasCenterCircle(true).setCenterText1(your_total).setCenterText2(Integer.toString(totalsteps)).setCenterText2FontSize(25).setCenterText1FontSize(15).setCenterText1Color(Color.parseColor("#FF03DAC5")).setCenterText2Color(Color.parseColor("#FF0000"));
         pieChartView.setPieChartData(pieChartData);
         pieChartView.animate();
         pieChartView.setChartRotationEnabled(true);
@@ -398,7 +413,9 @@ public class Firstpage extends AppCompatActivity {
     }
     public  void p(View view) {
         Intent intent = new Intent(getApplicationContext(),GeneralCheckup.class);
+        intent.putExtra("steps",total);
         intent.putExtra("full_name", email);
+
         startActivity(intent);
         //setData();
     }

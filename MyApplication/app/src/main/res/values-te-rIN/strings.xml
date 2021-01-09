@@ -94,7 +94,18 @@
 \nమేము ఎప్పటికప్పుడు మా గోప్యతా విధానాన్ని నవీకరించవచ్చు. అందువల్ల, ఏవైనా మార్పుల కోసం ఈ పేజీని క్రమానుగతంగా సమీక్షించాలని మీకు సలహా ఇస్తారు.
 
 \n\nఈ పేజీలో గోప్యతా విధానం
-\nఈ విధానం 31/12/2020 నాటికి అమలులో ఉంది.</string>
+\nఈ విధానం 31/12/2021 నాటికి అమలులో ఉంది.</string>
 
+
+    <string name="Browser">మా వెబ్‌సైట్‌ను చూడండి</string>
+    <string name="Email">ఇమెయిల్ ద్వారా మమ్మల్ని సంప్రదించండి</string>
+    <string name="Instagram">మా ఇన్‌స్టాగ్రామ్‌ను చూడండి</string>
+    <string name="Maps">మా స్థానాన్ని చూడండి</string>
+    <string name="General_Checkup">సాధారణ తనిఖీ</string>
+
+    <string name="Privacy_policy">గోప్యతా విధానం</string>
+    <string name="Your_total_steps">మీ మొత్తం దశలు</string>
+    <string name="Today">ఈ రోజు:</string>
+    <string name="This_Month">ఈ నెల :</string>
 
 </resources>

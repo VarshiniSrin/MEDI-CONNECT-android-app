@@ -44,11 +44,12 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
         sharedpreferences = getSharedPreferences(MyPREFERENCES, Context.MODE_PRIVATE);
         boolean is = true;
         is=sharedpreferences.getBoolean(userlogin, false);
         if(is){
-            Intent i=new Intent(getApplicationContext(),Firstpage.class);
+            Intent i =new Intent(getApplicationContext(),Firstpage.class);
             i.putExtra("full_name", sharedpreferences.getString(username,"error"));
             startActivity(i);
         }

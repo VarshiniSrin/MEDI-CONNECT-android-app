@@ -2,6 +2,7 @@ package com.example.myapplication;
 
 import android.Manifest;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.database.Cursor;
 import android.graphics.Bitmap;
@@ -30,6 +31,7 @@ public class DiseasePrediction extends AppCompatActivity {
 
     ProjectDataBaseHelper myDb;
     public String email;
+    int total;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,6 +45,8 @@ public class DiseasePrediction extends AppCompatActivity {
 
         Intent intent=getIntent();
         email=intent.getStringExtra("full");
+        total=intent.getIntExtra("steps",200);
+
 
         System.out.println("--------------------------------------------------------------");
         System.out.println(email);
@@ -154,6 +158,8 @@ public class DiseasePrediction extends AppCompatActivity {
                 sendSMS(obj.toString());
                 senEmail(symptoms,obj.toString(),1);
                 senEmail(symptoms,obj.toString(),2);
+                senEmail(symptoms,obj.toString(),3);
+
                 myDb.previousrecordvalues(email,symptoms, obj.toString());
 
             }
@@ -174,7 +180,7 @@ public class DiseasePrediction extends AppCompatActivity {
 
         try{
             SmsManager sm = SmsManager.getDefault();
-            sm.sendTextMessage(phno,null,message,null,null);
+            sm.sendTextMessage(phno,null,"Your ward may be suffering from " + message,null,null);
             Toast.makeText(this,"sms sent",Toast.LENGTH_SHORT).show();
         } catch (Exception e) {
             Toast.makeText(this,"sms not sent",Toast.LENGTH_SHORT).show();
@@ -215,17 +221,18 @@ public class DiseasePrediction extends AppCompatActivity {
         String mEmail;
         if(code == 1)
             mEmail = doctor_email;
-        else
+        else if(code == 2)
             mEmail = warden_email;
+        else
+            mEmail = p_g_email;
 
-        System.out.println("---------------------------------------------------------------------");
-        System.out.println(mEmail);
 
         String mSubject = "Diagnosis report";
         String mMessage = disease;
 
 
-        JavaMailAPI javaMailAPI = new JavaMailAPI(this, mEmail, mSubject, mMessage, symptoms, name,age,gender,height,weight,blood,previousdisease);
+
+        JavaMailAPI javaMailAPI = new JavaMailAPI(this, mEmail, mSubject, mMessage, symptoms, name,age,gender,height,weight,blood,previousdisease,total);
 
         javaMailAPI.execute();
         Toast.makeText(this, "message sent", Toast.LENGTH_SHORT).show();

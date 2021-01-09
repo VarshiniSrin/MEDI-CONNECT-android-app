@@ -72,6 +72,10 @@ public class POCupdate extends AppCompatActivity {
         myDb.updatevalues(email,pn, pe, de,we);
 
         Toast.makeText(this, "saved successfully", Toast.LENGTH_SHORT).show();
-        startActivity(new Intent(getApplicationContext(),Firstpage.class));
+
+        Intent ui = new Intent(getApplicationContext(), Firstpage.class);
+        ui.putExtra("full_name", email);
+        startActivity(ui);
+
     }
 }

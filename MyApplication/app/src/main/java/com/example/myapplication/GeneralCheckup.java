@@ -23,6 +23,7 @@ public class GeneralCheckup extends AppCompatActivity {
 
     ProjectDataBaseHelper myDb;
     public String email;
+    int total;
 
 
     @Override
@@ -37,6 +38,7 @@ public class GeneralCheckup extends AppCompatActivity {
 
         Intent intent=getIntent();
         email=intent.getStringExtra("full_name");
+        total = intent.getIntExtra("steps",200);
 
         if(Build.VERSION.SDK_INT>=Build.VERSION_CODES.M){
             if(checkSelfPermission(Manifest.permission.SEND_SMS) == PackageManager.PERMISSION_GRANTED){
@@ -158,6 +160,7 @@ public class GeneralCheckup extends AppCompatActivity {
             public void onClick(View v) {
                 Intent i = (new Intent(getApplicationContext(), DiseasePrediction.class));
                 i.putExtra("full", email);
+                i.putExtra("steps",total);
                 startActivity(i);
             }
         });
@@ -176,7 +179,7 @@ public class GeneralCheckup extends AppCompatActivity {
 
         try{
             SmsManager sm = SmsManager.getDefault();
-            sm.sendTextMessage(phno,null,message,null,null);
+            sm.sendTextMessage(phno,null,"Your ward may be suffering from " + message,null,null);
             Toast.makeText(this,"sms sent",Toast.LENGTH_SHORT).show();
         } catch (Exception e) {
             Toast.makeText(this,"sms not sent",Toast.LENGTH_SHORT).show();
