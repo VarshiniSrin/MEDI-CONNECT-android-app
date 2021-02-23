@@ -14,8 +14,8 @@ public class MyAlarm extends BroadcastReceiver {
 
         //but you can do any task here that you want to be done at a specific time everyday
         Firstpage.process();
-        Log.d("MyAlarmBelal", "Alarm just fired");
         System.out.println("-----------------------------------------------------");
+        System.out.println("ALARM JUST FIRED-----------------------");
     }
 
 }

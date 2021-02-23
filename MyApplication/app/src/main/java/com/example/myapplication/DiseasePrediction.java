@@ -92,7 +92,7 @@ public class DiseasePrediction extends AppCompatActivity {
 
         Button button = (Button)findViewById(R.id.button);
 
-        final EditText editText = (EditText)findViewById(R.id.editText1);
+        final TextView textView = (TextView) findViewById(R.id.editText1);
 
 
         image1.setOnClickListener(new View.OnClickListener() {
@@ -141,7 +141,7 @@ public class DiseasePrediction extends AppCompatActivity {
                 final String symptom5 = s5.getSelectedItem().toString();
 
                 PyObject obj = pyobj.callAttr("main", symptom1, symptom2, symptom3, symptom4, symptom5);
-                editText.setText(obj.toString());
+                textView.setText(obj.toString());
 
                 String symptoms = "";
                 if(!symptom1.equals("Select"))

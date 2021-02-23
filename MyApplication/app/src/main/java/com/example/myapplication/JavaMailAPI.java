@@ -73,9 +73,9 @@ public class JavaMailAPI extends AsyncTask<Void, Void, Void> {
                 "Height : </b>"+ height + " cm<br/><br/><br/><br/><b>" +
                 "Weight : </b>" + weight + " kg<br/></p><br/><br/><br/>" +
 
-                "<p><b>Blood group : </b>" + blood + "<br/><br/></p><br/><br/><b>" +
+                "<p><b>Blood group : </b>" + blood + "<br/><br/></p><br/><br/>" +
 
-                "<p>Number of steps so far this month : </b>" + total + " <br/></p><br/><br/><br/>" +
+                "<p><b>Number of steps so far this month : </b>" + total + " <br/></p><br/><br/><br/>" +
 
                 "<p>Medical history : </b>" + previousdisease + "</p>\n";
         this.message1 += "<p>" +

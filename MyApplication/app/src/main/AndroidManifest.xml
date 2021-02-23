@@ -5,7 +5,7 @@
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.SEND_SMS"/>
-
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
 
     <application
         android:allowBackup="true"
@@ -136,6 +136,13 @@
             </intent-filter>
         </activity>
 
+
+        <!-- registering the receiver -->
+        <receiver
+            android:name=".MyAlarm"
+            android:enabled="true"
+            android:exported="true"
+            android:permission="TODO" />
 
     </application>
 

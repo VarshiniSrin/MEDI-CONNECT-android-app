@@ -4,17 +4,18 @@
             xmlns:tools="http://schemas.android.com/tools"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@drawable/img3"
+            android:background="@drawable/image4"
             tools:context=".DiseasePrediction">
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:text="@string/Enter_Symptoms"
-                android:textColor="#000000"
-                android:layout_marginTop="20dp"
-                android:layout_marginLeft="10dp"
-                android:textSize="22dp"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="20dp"
+        android:text="@string/Enter_Symptoms"
+        android:textColor="#000000"
+        android:textSize="22dp"
+        android:textStyle="bold" />
 
 
             <RelativeLayout
@@ -31,8 +32,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="50dp"
-                    android:textColor="#000000"
-                    android:text="@string/Symptom_1" />
+                    android:text="@string/Symptom_1"
+                    android:textColor="#000000" />
 
                 <Spinner
                     android:id="@+id/spinner1"
@@ -45,8 +46,8 @@
 
                 <ImageButton
                     android:id="@+id/image1"
-                    android:layout_width="23dp"
-                    android:layout_height="23dp"
+                    android:layout_width="26dp"
+                    android:layout_height="26dp"
                     android:layout_marginTop="10dp"
                     android:src="@drawable/ic_add"
                     android:layout_below="@+id/textView1"
@@ -76,8 +77,8 @@
 
                 <ImageButton
                     android:id="@+id/image2"
-                    android:layout_width="23dp"
-                    android:layout_height="23dp"
+                    android:layout_width="26dp"
+                    android:layout_height="26dp"
                     android:layout_marginTop="10dp"
                     android:src="@drawable/ic_add"
                     android:visibility="gone"
@@ -108,8 +109,8 @@
 
                 <ImageButton
                     android:id="@+id/image3"
-                    android:layout_width="23dp"
-                    android:layout_height="23dp"
+                    android:layout_width="26dp"
+                    android:layout_height="26dp"
                     android:layout_marginTop="10dp"
                     android:src="@drawable/ic_add"
                     android:visibility="gone"
@@ -140,8 +141,8 @@
 
                 <ImageButton
                     android:id="@+id/image4"
-                    android:layout_width="23dp"
-                    android:layout_height="23dp"
+                    android:layout_width="26dp"
+                    android:layout_height="26dp"
                     android:layout_marginTop="10dp"
                     android:src="@drawable/ic_add"
                     android:visibility="gone"
@@ -184,16 +185,18 @@
                 android:translationX="110dp"
                 android:translationY="0dp" />
 
-            <EditText
-                android:id="@+id/editText1"
-                android:layout_width="310dp"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/button"
-                android:layout_marginTop="20dp"
-                android:hint="@string/Prognosis"
-                android:paddingLeft="10dp"
-                android:textAlignment="center"
-                android:textColor="#000000"
-                android:gravity="center_horizontal" />
+    <TextView
+        android:id="@+id/editText1"
+        android:layout_width="310dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/button"
+        android:layout_marginTop="20dp"
+        android:gravity="center_horizontal"
+        android:hint="@string/Prognosis"
+        android:paddingLeft="10dp"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        android:textStyle="bold" />
 
         </RelativeLayout>

@@ -24,7 +24,7 @@ public class privacy_policy extends AppCompatActivity {
         setContentView(R.layout.activity_privacy_policy);
 
         Objects.requireNonNull(getSupportActionBar()).setDisplayHomeAsUpEnabled(true);
-        getSupportActionBar().setTitle(R.string.Privacy_Policy);
+        getSupportActionBar().setTitle(R.string.Privacy_policy);
 
     }
 

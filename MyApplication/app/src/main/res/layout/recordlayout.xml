@@ -3,9 +3,15 @@
 xmlns:android="http://schemas.android.com/apk/res/android"
 xmlns:app="http://schemas.android.com/apk/res-auto"
 xmlns:tools="http://schemas.android.com/tools"
-    android:background="@drawable/img12"
+    android:background="@drawable/image1"
 android:layout_width="match_parent"
 android:layout_height="match_parent">
+
+    <requestFocus
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:layout_editor_absoluteX="203dp"
+        tools:layout_editor_absoluteY="33dp" />
 
     <EditText
         android:id="@+id/editTextNumberSigned"
@@ -19,6 +25,10 @@ android:layout_height="match_parent">
         android:gravity="center"
         android:hint="@string/Age"
         android:inputType="numberSigned"
+        android:textColor="#000000"
+        android:textColorHint="#000000"
+        android:textSize="18sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
@@ -36,6 +46,9 @@ android:layout_height="match_parent">
         android:gravity="center"
         android:hint="@string/Height"
         android:inputType="numberSigned"
+        android:textColor="#000000"
+        android:textColorHint="#000000"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.502"
         app:layout_constraintStart_toStartOf="parent"
@@ -61,6 +74,9 @@ android:layout_height="match_parent">
         android:gravity="center"
         android:hint="@string/Weight"
         android:inputType="numberSigned"
+        android:textColor="#000000"
+        android:textColorHint="#000000"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.502"
         app:layout_constraintStart_toStartOf="parent"
@@ -68,8 +84,8 @@ android:layout_height="match_parent">
 
     <Spinner
         android:id="@+id/spinner2"
-        android:layout_width="183dp"
-        android:layout_height="46dp"
+        android:layout_width="242dp"
+        android:layout_height="42dp"
         android:layout_marginTop="16dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.504"
@@ -86,19 +102,26 @@ android:layout_height="match_parent">
         android:gravity="center"
         android:hint="@string/Enter_previous_diseases_allergies_if_any"
         android:inputType="textMultiLine"
+        android:textColor="#000000"
+        android:textColorHint="#000000"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.502"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-    android:id="@+id/button4"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:layout_marginTop="508dp"
-    android:text="@string/NEXT"
-    app:layout_constraintEnd_toEndOf="parent"
-    app:layout_constraintHorizontal_bias="0.504"
-    app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintTop_toTopOf="parent" />
+        android:id="@+id/button4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="508dp"
+        android:text="@string/NEXT"
+        android:textColor="#000000"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

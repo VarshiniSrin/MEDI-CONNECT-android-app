@@ -3,33 +3,26 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/relativeLayout2"
-    android:background="@drawable/img1"
+    android:background="@drawable/image2"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:layout_editor_absoluteX="8dp"
     tools:layout_editor_absoluteY="8dp">
 
-    <View
-        android:id="@+id/view"
-        android:layout_width="match_parent"
-        android:layout_height="90dp"
-        android:background="#673AB7"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/tSignUP"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="60dp"
         android:text="@string/Sign_Up"
         android:textAppearance="@style/TextAppearance.AppCompat.Body2"
-        android:textColor="#FFEA00"
+        android:textColor="#B61515"
         android:textSize="25sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintHorizontal_bias="0.504"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/view" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/buttonOK"
@@ -40,48 +33,45 @@
         android:background="#AA00FF"
         android:onClick="OK"
         android:text="@string/NEXT"
+        android:textColor="#000000"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.501"
         app:layout_constraintStart_toStartOf="parent" />
 
-    <TextView
-        android:id="@+id/textView9"
-        android:layout_width="328dp"
-        android:layout_height="32dp"
-        android:layout_marginTop="48dp"
-        android:text="@string/Welcome"
-        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
-        android:textColor="#76FF03"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
     <EditText
         android:id="@+id/editTextTextPersonName"
         android:layout_width="218dp"
         android:layout_height="39dp"
-        android:layout_marginTop="68dp"
-        android:ems="10"
-        android:hint="@string/Full_Name"
+        android:layout_marginTop="156dp"
         android:background="@drawable/roundcorners"
+        android:ems="10"
         android:gravity="center"
+        android:hint="@string/Full_Name"
         android:inputType="textPersonName"
+        android:textColorHint="#000000"
+        android:textSize="20sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.506"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/view" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/editTextTextPassword"
         android:layout_width="218dp"
         android:layout_height="39dp"
         android:layout_marginTop="60dp"
-        android:ems="10"
-        android:hint="@string/Password"
         android:background="@drawable/roundcorners"
+        android:ems="10"
         android:gravity="center"
+        android:hint="@string/Password"
         android:inputType="textPassword"
+        android:textColor="#000000"
+        android:textColorHint="#000000"
+        android:textSize="20sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextTextEmailAddress" />
@@ -96,6 +86,10 @@
         android:gravity="center"
         android:hint="@string/Email_ID"
         android:inputType="textEmailAddress"
+        android:textColor="#000000"
+        android:textColorHint="#000000"
+        android:textSize="20sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.507"
         app:layout_constraintStart_toStartOf="parent"

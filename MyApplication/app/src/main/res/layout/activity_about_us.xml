@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/img8"
+    android:background="@drawable/image2"
     tools:context=".about_us">
 
     <TextView
@@ -13,7 +13,9 @@
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:text="@string/app_name"
+        android:textColor="#000000"
         android:textSize="22sp"
+        android:textStyle="bold"
         android:translationY="90dp" />
 
     <TextView
@@ -22,7 +24,9 @@
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:text="~Raghavendra, Prajwal and Varshini"
+        android:textColor="#000000"
         android:textSize="15sp"
+        android:textStyle="bold"
         android:translationY="120dp" />
 
     <TextView

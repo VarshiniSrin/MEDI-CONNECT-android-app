@@ -3,6 +3,10 @@ package com.example.myapplication;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.drawerlayout.widget.DrawerLayout;
+
+import android.animation.ArgbEvaluator;
+import android.animation.ObjectAnimator;
+import android.annotation.SuppressLint;
 import android.app.AlarmManager;
 import android.app.PendingIntent;
 import android.content.Context;
@@ -21,6 +25,7 @@ import android.util.DisplayMetrics;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.animation.Animation;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -100,14 +105,17 @@ public class Firstpage extends AppCompatActivity {
 
     private String your_total,today,this_month;
 
+    public static final String MyPREFERENCES = "My" ;
+
+    TextView txt;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
         final Locale language = getResources().getConfiguration().locale;
         final String current = language.toString();
-        System.out.println("-----------------------------------------------------------------------------------");
-        System.out.println("Language chosen is" + current);
 
 //        Locale locale;
 //        locale = new Locale(languageToLoad);
@@ -119,6 +127,8 @@ public class Firstpage extends AppCompatActivity {
 
         setContentView(R.layout.firstpage);
 
+
+
         //getSupportActionBar().hide();
         Objects.requireNonNull(getSupportActionBar()).setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setTitle(R.string.Home);
@@ -128,6 +138,16 @@ public class Firstpage extends AppCompatActivity {
         myDb = new ProjectDataBaseHelper(Firstpage.this);
         Cursor res = myDb.fetchprofile1(email);
 
+
+        SharedPreferences sharedPreferences = getSharedPreferences(Firstpage.MyPREFERENCES, Context.MODE_PRIVATE);
+        stepCount = sharedPreferences.getInt("stepCount",0);
+        total=sharedPreferences.getInt("total",0);
+        totalsteps=sharedPreferences.getInt("totalsteps",0);
+
+
+
+        txt=(TextView)findViewById(R.id.textView);
+        manageBlinkEffect();
 
         your_total= getString(R.string.Your_total_steps);
         today= getString(R.string.Today);
@@ -223,8 +243,28 @@ public class Firstpage extends AppCompatActivity {
 
         //Check for new day in order to reset stepCount to 0
         Calendar calendar = Calendar.getInstance();
-        calendar.set(calendar.get(Calendar.YEAR), calendar.get(Calendar.MONTH), calendar.get(Calendar.DAY_OF_MONTH), 00, 00, 00);
-        setAlarm(calendar.getTimeInMillis());
+//        if (android.os.Build.VERSION.SDK_INT >= 23) {
+//            calendar.set(calendar.get(Calendar.YEAR), calendar.get(Calendar.MONTH), calendar.get(Calendar.DAY_OF_MONTH), 00, 00, 0);
+//        } else {
+//            calendar.set(calendar.get(Calendar.YEAR), calendar.get(Calendar.MONTH), calendar.get(Calendar.DAY_OF_MONTH), 00, 00, 0);
+//        }
+
+
+        if (android.os.Build.VERSION.SDK_INT >= 23) {
+            calendar.set(2021, 0, 10, 00, 00, 0);
+        } else {
+            calendar.set(2021, 0, 10, 00, 00, 0);
+        }
+
+//
+//        System.out.println("----------------------------------------------------------------------");
+//        System.out.println(calendar.getTimeInMillis());
+//        System.out.println("----------------------------------------------------------------------");
+//        System.out.println(calendar.get(Calendar.YEAR) + ":" + calendar.get(Calendar.MONTH) + ":" + calendar.get(Calendar.DAY_OF_MONTH));
+//        System.out.println("----------------------------------------------------------------------");
+
+        //calendar.set(calendar.get(Calendar.YEAR), calendar.get(Calendar.MONTH), calendar.get(Calendar.DAY_OF_MONTH), 10, 39, 00);
+        //setAlarm(calendar.getTimeInMillis());
 
 
         SensorManager sensorManager = (SensorManager) getSystemService(SENSOR_SERVICE);
@@ -245,9 +285,15 @@ public class Firstpage extends AppCompatActivity {
                     MagnitudePrevious = Magnitude;
 
                     if (MagnitudeDelta > 3) {
-                        ++stepCount;
-                        ++total;
-                        ++totalsteps;
+
+                        total++;
+                        stepCount++;
+                        totalsteps++;
+//
+//                        total=0;
+//                        stepCount=0;
+//                        totalsteps=0;
+
                         setData();
                     }
                 }
@@ -339,9 +385,9 @@ public class Firstpage extends AppCompatActivity {
     protected void onPause() {
         super.onPause();
 
-       SharedPreferences sharedPreferences = getPreferences(MODE_PRIVATE);
+        SharedPreferences sharedPreferences = getSharedPreferences(Firstpage.MyPREFERENCES, Context.MODE_PRIVATE);
         SharedPreferences.Editor editor = sharedPreferences.edit();
-       editor.clear();
+        editor.clear();
         editor.putInt("stepCount", stepCount);
         editor.putInt("total", total);
         editor.putInt("totalsteps", totalsteps);
@@ -349,10 +395,11 @@ public class Firstpage extends AppCompatActivity {
 
 
     }
+
     protected void onStop() {
         super.onStop();
 
-        SharedPreferences sharedPreferences = getPreferences(MODE_PRIVATE);
+        SharedPreferences sharedPreferences = getSharedPreferences(Firstpage.MyPREFERENCES, Context.MODE_PRIVATE);
         SharedPreferences.Editor editor = sharedPreferences.edit();
         editor.clear();
         editor.putInt("stepCount", stepCount);
@@ -365,13 +412,8 @@ public class Firstpage extends AppCompatActivity {
     }
     protected void onResume() {
         super.onResume();
-        SharedPreferences sharedPreferences = getPreferences(MODE_PRIVATE);
-        stepCount = sharedPreferences.getInt("stepCount",0);
-        total=sharedPreferences.getInt("total",0);
-        totalsteps=sharedPreferences.getInt("totalsteps",0);
-
-
     }
+
     private void setData()
     {
 
@@ -403,7 +445,7 @@ public class Firstpage extends AppCompatActivity {
         Intent i = new Intent(this, MyAlarm.class);
         PendingIntent pi = PendingIntent.getBroadcast(this, 0, i, 0);
         am.setRepeating(AlarmManager.RTC, time, AlarmManager.INTERVAL_DAY, pi);
-        //Toast.makeText(this, "Alarm is set", Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, "Alarm is set", Toast.LENGTH_SHORT).show();
     }
 
     //To reset day steps to 0 each day
@@ -430,46 +472,15 @@ public class Firstpage extends AppCompatActivity {
         startActivity(intent);
     }
 
-}
 
-/*
-        pieData.add(new SliceValue(15, Color.BLUE).setLabel("Q1: $10"));
-        pieData.add(new SliceValue(25, Color.GRAY).setLabel("Q2: $4"));
-        pieData.add(new SliceValue(10, Color.RED).setLabel("Q3: $18"));
-        pieData.add(new SliceValue(60, Color.MAGENTA).setLabel("Q4: $28"));
-
-        PieChartData pieChartData = new PieChartData(pieData);
-        pieChartData.setHasLabels(true).setValueLabelTextSize(14);
-        pieChartData.setHasCenterCircle(true).setCenterText1("Sales in million").setCenterText1FontSize(20).setCenterText1Color(Color.parseColor("#0097A7"));
-        pieChartView.setPieChartData(pieChartData);
-
-            public void setDataonapp()
-    {
-
-        // Set the percentage of language used
-
-
-
-       // tvR.setText(Integer.toString(totalsteps));
-pieData.clear();
-        pieData.add(new SliceValue( Integer.parseInt(Integer.toString(stepCount)), Color.BLUE).setLabel("today "+Integer.toString(stepCount)));
-        pieData.add(new SliceValue(Integer.parseInt(Integer.toString(total)), Color.MAGENTA).setLabel("this month "+Integer.toString(total)));
-        //pieData.add(new SliceValue(10, Color.RED).setLabel("Q3: $18"));
-        // pieData.add(new SliceValue(Integer.parseInt(tvR.getText().toString()), Color.MAGENTA).setLabel("total"));
-
-        PieChartData pieChartData = new PieChartData(pieData);
-
-        pieChartData.setHasLabels(true).setValueLabelTextSize(14);
-
-        pieChartData.setHasCenterCircle(true).setCenterText1("Your total steps ").setCenterText2(Integer.toString(totalsteps)).setCenterText1FontSize(15).setCenterText1Color(Color.parseColor("#0097A7"));
-        pieChartView.setPieChartData(pieChartData);
-        pieChartView.animate();
-        pieChartView.setChartRotationEnabled(true);
-
-        // To animate the pie chart
-
-
-
+    @SuppressLint("WrongConstant")
+    private void manageBlinkEffect() {
+        ObjectAnimator anim = ObjectAnimator.ofInt(txt, "textColor", Color.BLUE, Color.MAGENTA, Color.GREEN, Color.BLACK,Color.MAGENTA);
+        anim.setDuration(5000);
+        anim.setEvaluator(new ArgbEvaluator());
+        anim.setRepeatMode(Animation.REVERSE);
+        anim.setRepeatCount(Animation.INFINITE);
+        anim.start();
     }
 
- */
+}
